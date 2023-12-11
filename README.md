@@ -202,7 +202,7 @@
     <summary><b>Abstract</b></summary>
     Masked Autoencoders (MAE) play a pivotal role in learning potent representations, delivering outstanding results across various 3D perception tasks essential for autonomous driving. In real-world driving scenarios, it's commonplace to deploy multiple sensors for comprehensive environment perception. While integrating multi-modal features from these sensors can produce rich and powerful features, there is a noticeable gap in MAE methods addressing this integration. This research delves into multi-modal Masked Autoencoders tailored for a unified representation space in autonomous driving, aiming to pioneer a more efficient fusion of two distinct modalities. To intricately marry the semantics inherent in images with the geometric intricacies of LiDAR point clouds, the UniM$^2$AE is proposed. This model stands as a potent yet straightforward, multi-modal self-supervised pre-training framework, mainly consisting of two designs. First, it projects the features from both modalities into a cohesive 3D volume space, ingeniously expanded from the bird's eye view (BEV) to include the height dimension. The extension makes it possible to back-project the informative features, obtained by fusing features from both modalities, into their native modalities to reconstruct the multiple masked inputs. Second, the Multi-modal 3D Interactive Module (MMIM) is invoked to facilitate the efficient inter-modal interaction during the interaction process. Extensive experiments conducted on the nuScenes Dataset attest to the efficacy of UniM$^2$AE, indicating enhancements in 3D object detection and BEV map segmentation by 1.2\%(NDS) and 6.5\% (mIoU), respectively.
 
-    <div align=center><img src="./assets/TODO.png" width="100%" /></div>
+    <div align=center><img src="./assets/UniM2AE.png" width="100%" /></div>
     </details>
 
     [![arXiv](https://img.shields.io/badge/arXiv-TODO-b31b1b.svg)](https://arxiv.org/abs/2304.10406) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](TODO) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](TODO)
@@ -321,7 +321,7 @@
     <summary><b>Abstract</b></summary>
     3D occupancy prediction holds significant promise in the fields of robot perception and autonomous driving, which quantifies 3D scenes into grid cells with semantic labels. Recent works mainly utilize complete occupancy labels in 3D voxel space for supervision. However, the expensive annotation process and sometimes ambiguous labels have severely constrained the usability and scalability of 3D occupancy models. To address this, we present RenderOcc, a novel paradigm for training 3D occupancy models only using 2D labels. Specifically, we extract a NeRF-style 3D volume representation from multi-view images, and employ volume rendering techniques to establish 2D renderings, thus enabling direct 3D supervision from 2D semantics and depth labels. Additionally, we introduce an Auxiliary Ray method to tackle the issue of sparse viewpoints in autonomous driving scenarios, which leverages sequential frames to construct comprehensive 2D rendering for each object. To our best knowledge, RenderOcc is the first attempt to train multi-view 3D occupancy models only using 2D labels, reducing the dependence on costly 3D occupancy annotations. Extensive experiments demonstrate that RenderOcc achieves comparable performance to models fully supervised with 3D labels, underscoring the significance of this approach in real-world applications.
 
-    <div align=center><img src="./assets/TODO.png" width="100%" /></div>
+    <div align=center><img src="./assets/RenderOcc.png" width="100%" /></div>
     </details>
 
     [![arXiv](https://img.shields.io/badge/arXiv-2309.09502-b31b1b.svg)](https://arxiv.org/abs/2309.09502) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/pmj110119/RenderOcc)
@@ -335,5 +335,8 @@
     </details>
 
     [![arXiv](https://img.shields.io/badge/arXiv-2311.12754-b31b1b.svg)](https://arxiv.org/abs/2311.12754) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://huang-yh.github.io/SelfOcc/) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/huang-yh/SelfOcc)
+
+### World Model
+
 
 👆 [Back to Top](#Table-of-Content)
