@@ -337,6 +337,45 @@
     [![arXiv](https://img.shields.io/badge/arXiv-2311.12754-b31b1b.svg)](https://arxiv.org/abs/2311.12754) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://huang-yh.github.io/SelfOcc/) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/huang-yh/SelfOcc)
 
 ### World Model
+- **GAIA-1: A Generative World Model for Autonomous Driving**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    Autonomous driving promises transformative improvements to transportation, but building systems capable of safely navigating the unstructured complexity of real-world scenarios remains challenging. A critical problem lies in effectively predicting the various potential outcomes that may emerge in response to the vehicle's actions as the world evolves. To address this challenge, we introduce GAIA-1 ('Generative AI for Autonomy'), a generative world model that leverages video, text, and action inputs to generate realistic driving scenarios while offering fine-grained control over ego-vehicle behavior and scene features. Our approach casts world modeling as an unsupervised sequence modeling problem by mapping the inputs to discrete tokens, and predicting the next token in the sequence. Emerging properties from our model include learning high-level structures and scene dynamics, contextual awareness, generalization, and understanding of geometry. The power of GAIA-1's learned representation that captures expectations of future events, combined with its ability to generate realistic samples, provides new possibilities for innovation in the field of autonomy, enabling enhanced and accelerated training of autonomous driving technology.
 
+    <div align=center><img src="./assets/GAIA-1.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2309.17080-b31b1b.svg)](https://arxiv.org/abs/2309.17080)
+
+- **Learning Unsupervised World Models for Autonomous Driving via Discrete Diffusion**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    
+    Learning world models can teach an agent how the world works in an unsupervised manner. Even though it can be viewed as a special case of sequence modeling, progress for scaling world models on robotic applications such as autonomous driving has been somewhat less rapid than scaling language models with Generative Pre-trained Transformers (GPT). We identify two reasons as major bottlenecks: dealing with complex and unstructured observation space, and having a scalable generative model. Consequently, we propose a novel world modeling approach that first tokenizes sensor observations with VQVAE, then predicts the future via discrete diffusion. To efficiently decode and denoise tokens in parallel, we recast Masked Generative Image Transformer into the discrete diffusion framework with a few simple changes, resulting in notable improvement. When applied to learning world models on point cloud observations, our model reduces prior SOTA Chamfer distance by more than 65% for 1s prediction, and more than 50% for 3s prediction, across NuScenes, KITTI Odometry, and Argoverse2 datasets. Our results demonstrate that discrete diffusion on tokenized agent experience can unlock the power of GPT-like unsupervised learning for robotic agents.
+
+    <div align=center><img src="./assets/learning_unsupervised.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2311.01017-b31b1b.svg)](https://arxiv.org/abs/2311.01017)
+
+- **ADriver-I: A General World Model for Autonomous Driving**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    Typically, autonomous driving adopts a modular design, which divides the full stack into perception, prediction, planning and control parts. Though interpretable, such modular design tends to introduce a substantial amount of redundancy. Recently, multimodal large language models (MLLM) and diffusion techniques have demonstrated their superior performance on comprehension and generation ability. In this paper, we first introduce the concept of interleaved vision-action pair, which unifies the format of visual features and control signals. Based on the vision-action pairs, we construct a general world model based on MLLM and diffusion model for autonomous driving, termed ADriver-I. It takes the vision-action pairs as inputs and autoregressively predicts the control signal of the current frame. The generated control signals together with the historical vision-action pairs are further conditioned to predict the future frames. With the predicted next frame, ADriver-I performs further control signal prediction. Such a process can be repeated infinite times, ADriver-I achieves autonomous driving in the world created by itself. Extensive experiments are conducted on nuScenes and our large-scale private datasets. ADriver-I shows impressive performance compared to several constructed baselines. We hope our ADriver-I can provide some new insights for future autonomous driving and embodied intelligence.
+
+    <div align=center><img src="./assets/ADriver-I.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2311.13549-b31b1b.svg)](https://arxiv.org/abs/2311.13549)
+
+- **MUVO: A Multimodal Generative World Model for Autonomous Driving with Geometric Representations**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    Learning unsupervised world models for autonomous driving has the potential to improve the reasoning capabilities of today's systems dramatically. However, most work neglects the physical attributes of the world and focuses on sensor data alone. We propose MUVO, a MUltimodal World Model with Geometric VOxel Representations to address this challenge. We utilize raw camera and lidar data to learn a sensor-agnostic geometric representation of the world, which can directly be used by downstream tasks, such as planning. We demonstrate multimodal future predictions and show that our geometric representation improves the prediction quality of both camera images and lidar point clouds.
+
+    <div align=center><img src="./assets/MUVO.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2311.11762-b31b1b.svg)](https://arxiv.org/abs/2311.11762)
 
 👆 [Back to Top](#Table-of-Content)
