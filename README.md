@@ -21,6 +21,16 @@
   - [LLM](#llm)
 
 ## Related Survey Papers
+- **Foundation Models for Decision Making: Problems, Methods, and Opportunities**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    Foundation models pretrained on diverse data at scale have demonstrated extraordinary capabilities in a wide range of vision and language tasks. When such models are deployed in real world environments, they inevitably interface with other entities and agents. For example, language models are often used to interact with human beings through dialogue, and visual perception models are used to autonomously navigate neighborhood streets. In response to these developments, new paradigms are emerging for training foundation models to interact with other agents and perform long-term reasoning. These paradigms leverage the existence of ever-larger datasets curated for multimodal, multitask, and generalist interaction. Research at the intersection of foundation models and decision making holds tremendous promise for creating powerful new systems that can interact effectively across a diverse range of applications such as dialogue, autonomous driving, healthcare, education, and robotics. In this manuscript, we examine the scope of foundation models for decision making, and provide conceptual tools and technical background for understanding the problem space and exploring new research directions. We review recent approaches that ground foundation models in practical decision making applications through a variety of methods such as prompting, conditional generative modeling, planning, optimal control, and reinforcement learning, and discuss common challenges and open problems in the field.
+
+    <div align=center><img src="./assets/FM.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2303.04129-b31b1b.svg)](https://arxiv.org/abs/2303.04129)
+
 - **On the Opportunities and Risks of Foundation Models**.
     <details span>
     <summary><b>Abstract</b></summary>
@@ -395,5 +405,15 @@
 
     [![arXiv](https://img.shields.io/badge/arXiv-2306.09347-b31b1b.svg)](https://arxiv.org/abs/2306.09347) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://ldkong.com/Seal) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/youquanl/Segment-Any-Point-Cloud)
 
+
+- **Robustness of Segment Anything Model (SAM) for Autonomous Driving in Adverse Weather Conditions**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    Segment Anything Model (SAM) has gained considerable interest in recent times for its remarkable performance and has emerged as a foundational model in computer vision. It has been integrated in diverse downstream tasks, showcasing its strong zero-shot transfer capabilities. Given its impressive performance, there is a strong desire to apply SAM in autonomous driving to improve the performance of vision tasks, particularly in challenging scenarios such as driving under adverse weather conditions. However, its robustness under adverse weather conditions remains uncertain. In this work, we investigate the application of SAM in autonomous driving and specifically explore its robustness under adverse weather conditions. Overall, this work aims to enhance understanding of SAM's robustness in challenging scenarios before integrating it into autonomous driving vision tasks, providing valuable insights for future applications.
+
+    <div align=center><img src="./assets/Robustness_SAM.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2306.13290-b31b1b.svg)](https://arxiv.org/abs/2306.13290)
 
 👆 [Back to Top](#Table-of-Content)
