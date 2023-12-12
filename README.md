@@ -16,6 +16,9 @@
   - [Rendering](#rendering)
   - [Distillation](#distillation)
   - [World Model](#world-model)
+- [Adaptation](#adaptation)
+  - [SAM](#sam)
+  - [LLM](#llm)
 
 ## Related Survey Papers
 - **On the Opportunities and Risks of Foundation Models**.
@@ -377,5 +380,20 @@
     </details>
 
     [![arXiv](https://img.shields.io/badge/arXiv-2311.11762-b31b1b.svg)](https://arxiv.org/abs/2311.11762)
+
+👆 [Back to Top](#Table-of-Content)
+
+## Adapatation
+### SAM
+- **Segment Any Point Cloud Sequences by Distilling Vision Foundation Models**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    Recent advancements in vision foundation models (VFMs) have opened up new possibilities for versatile and efficient visual perception. In this work, we introduceSeal, a novel framework that harnesses VFMs for segmenting diverse automotive point cloud sequences. Seal exhibits three appealing properties: i) Scalability:VFMs are directly distilled into point clouds, eliminating the need for annotations in either 2D or 3D during pretraining. ii) Consistency: Spatial and temporal relationships are enforced at both the camera-to-LiDAR and point-to-segment stages, facilitating cross-modal representation learning. iii) Generalizability: Seal enables knowledge transfer in an off-the-shelf manner to downstream tasks involving diverse point clouds, including those from real/synthetic, low/high-resolution, large/small-scale, and clean/corrupted datasets. Extensive experiments conducted on eleven different point cloud datasets showcase the effectiveness and superiority of Seal. Notably, Seal achieves a remarkable 45.0% mIoU on nuScenes after linear probing, surpassing random initialization by 36.9% mIoU and outperforming prior arts by 6.1% mIoU. Moreover, Seal demonstrates significant performance gains over existing methods across 20 different few-shot fine-tuning tasks on all eleven tested point cloud datasets.
+
+    <div align=center><img src="./assets/Seal.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2306.09347-b31b1b.svg)](https://arxiv.org/abs/2306.09347) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://ldkong.com/Seal) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/youquanl/Segment-Any-Point-Cloud)
+
 
 👆 [Back to Top](#Table-of-Content)
