@@ -109,6 +109,16 @@
 
 
 ### Diffusion
+- **GeoDiffusion: Text-Prompted Geometric Control for Object Detection Data Generation**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    Diffusion models have attracted significant attention due to the remarkable ability to create content and generate data for tasks like image classification. However, the usage of diffusion models to generate the high-quality object detection data remains an underexplored area, where not only image-level perceptual quality but also geometric conditions such as bounding boxes and camera views are essential. Previous studies have utilized either copy-paste synthesis or layout-to-image (L2I) generation with specifically designed modules to encode semantic layouts. In this paper, we propose GeoDiffusion, a simple framework that can flexibly translate various geometric conditions into text prompts and empower pre-trained text-to-image (T2I) diffusion models for high-quality detection data generation. Unlike previous L2I methods, our GeoDiffusion is able to encode not only the bounding boxes but also extra geometric conditions such as camera views in self-driving scenes. Extensive experiments demonstrate GeoDiffusion outperforms previous L2I methods while maintaining 4x training time faster. To the best of our knowledge, this is the first work to adopt diffusion models for layout-to-image generation with geometric conditions and demonstrate that L2I-generated images can be beneficial for improving the performance of object detectors.
+
+    <div align=center><img src="./assets/GeoDiffusion.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2306.04607-b31b1b.svg)](https://arxiv.org/abs/2306.04607) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://kaichen1998.github.io/projects/geodiffusion/) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/KaiChen1998/GeoDiffusion/tree/main)
+
 - **DrivingDiffusion: Layout-Guided multi-view driving scene video generation with latent diffusion model**.
     <details span>
     <summary><b>Abstract</b></summary>
@@ -145,6 +155,17 @@
 
 
 ### NeRF
+- **READ: Large-Scale Neural Scene Rendering for Autonomous Driving**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    Synthesizing free-view photo-realistic images is an important task in multimedia. With the development of advanced driver assistance systems~(ADAS) and their applications in autonomous vehicles, experimenting with different scenarios becomes a challenge. Although the photo-realistic street scenes can be synthesized by image-to-image translation methods, which cannot produce coherent scenes due to the lack of 3D information. In this paper, a large-scale neural rendering method is proposed to synthesize the autonomous driving scene~(READ), which makes it possible to synthesize large-scale driving scenarios on a PC through a variety of sampling schemes. In order to represent driving scenarios, we propose an {\omega} rendering network to learn neural descriptors from sparse point clouds. Our model can not only synthesize realistic driving scenes but also stitch and edit driving scenes. Experiments show that our model performs well in large-scale driving scenarios.
+
+    <div align=center><img src="./assets/READ.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2205.05509-b31b1b.svg)](https://arxiv.org/abs/2205.05509) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/JOP-Lee/READ)
+
+
 - **UniSim: Synthesizing Data with Perception Annotations Using Diffusion Models**.
     <details span>
     <summary><b>Abstract</b></summary>
@@ -174,6 +195,16 @@
     </details>
 
     [![arXiv](https://img.shields.io/badge/arXiv-2304.14811-b31b1b.svg)](https://arxiv.org/abs/2304.14811)
+
+- **MapNeRF: Incorporating Map Priors into Neural Radiance Fields for Driving View Simulation**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    Simulating camera sensors is a crucial task in autonomous driving. Although neural radiance fields are exceptional at synthesizing photorealistic views in driving simulations, they still fail to generate extrapolated views. This paper proposes to incorporate map priors into neural radiance fields to synthesize out-of-trajectory driving views with semantic road consistency. The key insight is that map information can be utilized as a prior to guiding the training of the radiance fields with uncertainty. Specifically, we utilize the coarse ground surface as uncertain information to supervise the density field and warp depth with uncertainty from unknown camera poses to ensure multi-view consistency. Experimental results demonstrate that our approach can produce semantic consistency in deviated views for vehicle camera simulation.
+
+    <div align=center><img src="./assets/MapNeRF.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2307.14981-b31b1b.svg)](https://arxiv.org/abs/2307.14981) [![WEB Page](https://img.shields.io/badge/Video-Page-b31b1b.svg)](https://www.youtube.com/watch?v=jEQWr-Rfh3A&feature=youtu.be)
 
 - **LiDAR-NeRF: Novel LiDAR View Synthesis via Neural Radiance Fields**.
     <details span>
@@ -240,6 +271,47 @@
     </details>
 
     [![arXiv](https://img.shields.io/badge/arXiv-2206.09900-b31b1b.svg)](https://arxiv.org/abs/2206.09900) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/chaytonmin/Occupancy-MAE)
+
+- **Implicit Autoencoder for Point-Cloud Self-Supervised Representation Learning**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    This paper advocates the use of implicit surface representation in autoencoder-based self-supervised 3D representation learning. The most popular and accessible 3D representation, i.e., point clouds, involves discrete samples of the underlying continuous 3D surface. This discretization process introduces sampling variations on the 3D shape, making it challenging to develop transferable knowledge of the true 3D geometry. In the standard autoencoding paradigm, the encoder is compelled to encode not only the 3D geometry but also information on the specific discrete sampling of the 3D shape into the latent code. This is because the point cloud reconstructed by the decoder is considered unacceptable unless there is a perfect mapping between the original and the reconstructed point clouds. This paper introduces the Implicit AutoEncoder (IAE), a simple yet effective method that addresses the sampling variation issue by replacing the commonly-used point-cloud decoder with an implicit decoder. The implicit decoder reconstructs a continuous representation of the 3D shape, independent of the imperfections in the discrete samples. Extensive experiments demonstrate that the proposed IAE achieves state-of-the-art performance across various self-supervised learning benchmarks.
+
+    <div align=center><img src="./assets/training/IAE.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2201.00785-b31b1b.svg)](https://arxiv.org/abs/2201.00785) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](TODO) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](TODO)
+
+- **BEV-MAE: Bird's Eye View Masked Autoencoders for Outdoor Point Cloud Pre-training**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    Current outdoor LiDAR-based 3D object detection methods mainly adopt the training-from-scratch paradigm. Unfortunately, this paradigm heavily relies on large-scale labeled data, whose collection can be expensive and time-consuming. Self-supervised pre-training is an effective and desirable way to alleviate this dependence on extensive annotated data. Recently, masked modeling has become a successful self-supervised learning approach for point clouds. However, current works mainly focus on synthetic or indoor datasets. When applied to large-scale and sparse outdoor point clouds, they fail to yield satisfactory results. In this work, we present BEV-MAE, a simple masked autoencoder pre-training framework for 3D object detection on outdoor point clouds. Specifically, we first propose a bird's eye view (BEV) guided masking strategy to guide the 3D encoder learning feature representation in a BEV perspective and avoid complex decoder design during pre-training. Besides, we introduce a learnable point token to maintain a consistent receptive field size of the 3D encoder with fine-tuning for masked point cloud inputs. Finally, based on the property of outdoor point clouds, i.e., the point clouds of distant objects are more sparse, we propose point density prediction to enable the 3D encoder to learn location information, which is essential for object detection. Experimental results show that BEV-MAE achieves new state-of-the-art self-supervised results on both Waymo and nuScenes with diverse 3D object detectors. Furthermore, with only 20% data and 7% training cost during pre-training, BEV-MAE achieves comparable performance with the state-of-the-art method ProposalContrast. 
+
+    <div align=center><img src="./assets/BEV-MAE.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2212.05758-b31b1b.svg)](https://arxiv.org/abs/2212.05758)
+
+
+- **MAELi: Masked Autoencoder for Large-Scale LiDAR Point Clouds**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    The sensing process of large-scale LiDAR point clouds inevitably causes large blind spots, i.e. regions not visible to the sensor. We demonstrate how these inherent sampling properties can be effectively utilized for self-supervised representation learning by designing a highly effective pre-training framework that considerably reduces the need for tedious 3D annotations to train state-of-the-art object detectors. Our Masked AutoEncoder for LiDAR point clouds (MAELi) intuitively leverages the sparsity of LiDAR point clouds in both the encoder and decoder during reconstruction. This results in more expressive and useful initialization, which can be directly applied to downstream perception tasks, such as 3D object detection or semantic segmentation for autonomous driving. In a novel reconstruction approach, MAELi distinguishes between empty and occluded space and employs a new masking strategy that targets the LiDAR's inherent spherical projection. Thereby, without any ground truth whatsoever and trained on single frames only, MAELi obtains an understanding of the underlying 3D scene geometry and semantics. To demonstrate the potential of MAELi, we pre-train backbones in an end-to-end manner and show the effectiveness of our unsupervised pre-trained weights on the tasks of 3D object detection and semantic segmentation.
+
+    <div align=center><img src="./assets/MAELi.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2212.07207-b31b1b.svg)](https://arxiv.org/abs/2212.07207)
+
+- **GD-MAE: Generative Decoder for MAE Pre-training on LiDAR Point Clouds**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    Despite the tremendous progress of Masked Autoencoders (MAE) in developing vision tasks such as image and video, exploring MAE in large-scale 3D point clouds remains challenging due to the inherent irregularity. In contrast to previous 3D MAE frameworks, which either design a complex decoder to infer masked information from maintained regions or adopt sophisticated masking strategies, we instead propose a much simpler paradigm. The core idea is to apply a \textbf{G}enerative \textbf{D}ecoder for MAE (GD-MAE) to automatically merges the surrounding context to restore the masked geometric knowledge in a hierarchical fusion manner. In doing so, our approach is free from introducing the heuristic design of decoders and enjoys the flexibility of exploring various masking strategies. The corresponding part costs less than \textbf{12\%} latency compared with conventional methods, while achieving better performance. We demonstrate the efficacy of the proposed method on several large-scale benchmarks: Waymo, KITTI, and ONCE. Consistent improvement on downstream detection tasks illustrates strong robustness and generalization capability. Not only our method reveals state-of-the-art results, but remarkably, we achieve comparable accuracy even with \textbf{20\%} of the labeled data on the Waymo dataset.
+
+    <div align=center><img src="./assets/GD-MAE.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2212.03010-b31b1b.svg)](https://arxiv.org/abs/2212.03010) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/Nightmare-n/GD-MAE)
 
 - **ALSO: Automotive Lidar Self-supervision by Occupancy estimation**.
     <details span>
