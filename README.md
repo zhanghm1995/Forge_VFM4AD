@@ -1,8 +1,11 @@
-# Forge Vision Foundation Models for Autonoumous Driving: A Survey
+# Forging Vision Foundation Models for Autonoumous Driving: Challenges and Frontiers
 
 **NOTE**: Here we select several featured papers for each part, and for each paper, we have contained the abstract and a figure from the original paper presenting the main framework or motivations to help us take a glance about these papers (You can expand the **Abstract** button to see them). More papers list and details can be found in our survey paper 🎉.
 
 **We greatly appreciate any contributions via PRs, issues, emails, or other methods.**
+
+## News 📰
+- **[2023/12/19]** Initial commit.
 
 ## Table of Content
 - [Related Survey Papers](#related-survey-papers)
@@ -40,6 +43,14 @@
     </details>
 
     [![arXiv](https://img.shields.io/badge/arXiv-2108.07258-b31b1b.svg)](https://arxiv.org/abs/2108.07258) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://crfm.stanford.edu/report.html)
+
+- **Foundation Models in Robotics: Applications, Challenges, and the Future**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    We survey applications of pretrained foundation models in robotics. Traditional deep learning models in robotics are trained on small datasets tailored for specific tasks, which limits their adaptability across diverse applications. In contrast, foundation models pretrained on internet-scale data appear to have superior generalization capabilities, and in some instances display an emergent ability to find zero-shot solutions to problems that are not present in the training data. Foundation models may hold the potential to enhance various components of the robot autonomy stack, from perception to decision-making and control. For example, large language models can generate code or provide common sense reasoning, while vision-language models enable open-vocabulary visual recognition. However, significant open research challenges remain, particularly around the scarcity of robot-relevant training data, safety guarantees and uncertainty quantification, and real-time execution. In this survey, we study recent papers that have used or built foundation models to solve robotics problems. We explore how foundation models contribute to improving robot capabilities in the domains of perception, decision-making, and control. We discuss the challenges hindering the adoption of foundation models in robot autonomy and provide opportunities and potential pathways for future advancements. The GitHub project corresponding to this paper (Preliminary release.
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2312.07843-b31b1b.svg)](https://arxiv.org/abs/2312.07843) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/robotics-survey/Awesome-Robotics-Foundation-Models)
+
 
 - **A Survey of Large Language Models for Autonomous Driving**.
     <details span>
@@ -280,7 +291,7 @@
     <div align=center><img src="./assets/training/IAE.png" width="100%" /></div>
     </details>
 
-    [![arXiv](https://img.shields.io/badge/arXiv-2201.00785-b31b1b.svg)](https://arxiv.org/abs/2201.00785) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](TODO) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](TODO)
+    [![arXiv](https://img.shields.io/badge/arXiv-2201.00785-b31b1b.svg)](https://arxiv.org/abs/2201.00785) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/SimingYan/IAE)
 
 - **BEV-MAE: Bird's Eye View Masked Autoencoders for Outdoor Point Cloud Pre-training**.
     <details span>
