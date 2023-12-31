@@ -115,6 +115,46 @@
 
     [![arXiv](https://img.shields.io/badge/arXiv-2005.03844-b31b1b.svg)](https://arxiv.org/abs/2005.03844)
 
+- **GAN-Based LiDAR Translation between Sunny and Adverse Weather for Autonomous Driving and Driving Simulation**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    Autonomous driving requires robust and highly accurate perception technologies. Various deep learning algorithms based on only image processing satisfy this requirement, but few such algorithms are based on LiDAR. However, images are only one part of the perceptible sensors in an autonomous driving vehicle; LiDAR is also essential for the recognition of driving environments. The main reason why there exist few deep learning algorithms based on LiDAR is a lack of data. Recent translation technology using generative adversarial networks (GANs) has been proposed to deal with this problem. However, these technologies focus on only image-to-image translation, although a lack of data occurs more often with LiDAR than with images. LiDAR translation technology is required not only for data augmentation, but also for driving simulation, which allows algorithms to practice driving as if they were commanding a real vehicle, before doing so in the real world. In other words, driving simulation is a key technology for evaluating and verifying algorithms which are practically applied to vehicles. In this paper, we propose a GAN-based LiDAR translation algorithm for autonomous driving and driving simulation. It is the first LiDAR translation approach that can deal with various types of weather that are based on an empirical approach. We tested the proposed method on the JARI data set, which was collected under various adverse weather scenarios with diverse precipitation and visible distance settings. The proposed method was also applied to the real-world Spain data set. Our experimental results demonstrate that the proposed method can generate realistic LiDAR data under adverse weather conditions.
+
+    <div align=center><img src="./assets/data/LiDAR2LiDAR.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/MDPI-Sensors-007C7F.svg)](https://www.mdpi.com/1424-8220/22/14/5287)
+
+
+- **LiDAR Sensor modeling and Data augmentation with GANs for Autonomous driving**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    In the autonomous driving domain, data collection and annotation from real vehicles are expensive and sometimes unsafe. Simulators are often used for data augmentation, which requires realistic sensor models that are hard to formulate and model in closed forms. Instead, sensors models can be learned from real data. The main challenge is the absence of paired data set, which makes traditional supervised learning techniques not suitable. In this work, we formulate the problem as image translation from unpaired data and employ CycleGANs to solve the sensor modeling problem for LiDAR, to produce realistic LiDAR from simulated LiDAR (sim2real). Further, we generate high-resolution, realistic LiDAR from lower resolution one (real2real). The LiDAR 3D point cloud is processed in Bird-eye View and Polar 2D representations. The experimental results show a high potential of the proposed approach.
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-1905.07290-b31b1b.svg)](https://arxiv.org/abs/1905.07290) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/ahmadelsallab/lidargan)
+
+- **DeepRoad: GAN-based Metamorphic Autonomous Driving System Testing**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    While Deep Neural Networks (DNNs) have established the fundamentals of DNN-based autonomous driving systems, they may exhibit erroneous behaviors and cause fatal accidents. To resolve the safety issues of autonomous driving systems, a recent set of testing techniques have been designed to automatically generate test cases, e.g., new input images transformed from the original ones. Unfortunately, many such generated input images often render inferior authenticity, lacking accurate semantic information of the driving scenes and hence compromising the resulting efficacy and reliability.In this paper, we propose DeepRoad, an unsupervised framework to automatically generate large amounts of accurate driving scenes to test the consistency of DNN-based autonomous driving systems across different scenes. In particular, DeepRoad delivers driving scenes with various weather conditions (including those with rather extreme conditions) by applying the Generative Adversarial Networks (GANs) along with the corresponding real-world weather scenes. Moreover, we have implemented DeepRoad to test three well-recognized DNN-based autonomous driving systems. Experimental results demonstrate that DeepRoad can detect thousands of behavioral inconsistencies in these systems.
+
+    <div align=center><img src="./assets/data/DeepRoad.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-1802.02295-b31b1b.svg)](https://arxiv.org/abs/1802.02295)
+
+- **Deep generative modeling of lidar data**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    Building models capable of generating structured output is a key challenge for AI and robotics. While generative models have been explored on many types of data, little work has been done on synthesizing lidar scans, which play a key role in robot mapping and localization. In this work, we show that one can adapt deep generative models for this task by unravelling lidar scans into a 2D point map. Our approach can generate high quality samples, while simultaneously learning a meaningful latent representation of the data. We demonstrate significant improvements against state-of-the-art point cloud generation methods. Furthermore, we propose a novel data representation that augments the 2D signal with absolute positional information. We show that this helps robustness to noisy and imputed input; the learned model can recover the underlying lidar scan from seemingly uninformative data.
+
+    <div align=center><img src="./assets/data/LiDARGAN.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-1812.01180-b31b1b.svg)](https://arxiv.org/abs/1812.01180) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/pclucas14/lidar_generation)
+
+
 
 
 👆 [Back to Top](#Table-of-Content)
