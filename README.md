@@ -1,4 +1,4 @@
-# Forging Vision Foundation Models for Autonoumous Driving: Challenges and Frontiers
+# Forging Large Vision Foundation Models for Autonomous Driving: Challenges, Methodologies, and Opportunities
 
 **NOTE**: Here we select several featured papers for each part, and for each paper, we have contained the abstract and a figure from the original paper presenting the main framework or motivations to help us take a glance about these papers (You can expand the **Abstract** button to see them). More papers list and details can be found in our survey paper 🎉.
 
@@ -21,7 +21,8 @@
   - [World Model](#world-model)
 - [Adaptation](#adaptation)
   - [SAM](#sam)
-  - [LLM](#llm)
+  - [CLIP](#clip)
+  - [LLMs & VLMs](#llm-vlm)
 
 ## Related Survey Papers
 - **Foundation Models for Decision Making: Problems, Methods, and Opportunities**.
@@ -117,7 +118,7 @@
 
 - **GAN-Based LiDAR Translation between Sunny and Adverse Weather for Autonomous Driving and Driving Simulation**.
     <details span>
-    <summary><b>Abstract</b></summary>
+    <summary>Abstract</summary>
     Autonomous driving requires robust and highly accurate perception technologies. Various deep learning algorithms based on only image processing satisfy this requirement, but few such algorithms are based on LiDAR. However, images are only one part of the perceptible sensors in an autonomous driving vehicle; LiDAR is also essential for the recognition of driving environments. The main reason why there exist few deep learning algorithms based on LiDAR is a lack of data. Recent translation technology using generative adversarial networks (GANs) has been proposed to deal with this problem. However, these technologies focus on only image-to-image translation, although a lack of data occurs more often with LiDAR than with images. LiDAR translation technology is required not only for data augmentation, but also for driving simulation, which allows algorithms to practice driving as if they were commanding a real vehicle, before doing so in the real world. In other words, driving simulation is a key technology for evaluating and verifying algorithms which are practically applied to vehicles. In this paper, we propose a GAN-based LiDAR translation algorithm for autonomous driving and driving simulation. It is the first LiDAR translation approach that can deal with various types of weather that are based on an empirical approach. We tested the proposed method on the JARI data set, which was collected under various adverse weather scenarios with diverse precipitation and visible distance settings. The proposed method was also applied to the real-world Spain data set. Our experimental results demonstrate that the proposed method can generate realistic LiDAR data under adverse weather conditions.
 
     <div align=center><img src="./assets/data/LiDAR2LiDAR.png" width="100%" /></div>
@@ -128,7 +129,7 @@
 
 - **LiDAR Sensor modeling and Data augmentation with GANs for Autonomous driving**.
     <details span>
-    <summary><b>Abstract</b></summary>
+    <summary>Abstract</summary>
     In the autonomous driving domain, data collection and annotation from real vehicles are expensive and sometimes unsafe. Simulators are often used for data augmentation, which requires realistic sensor models that are hard to formulate and model in closed forms. Instead, sensors models can be learned from real data. The main challenge is the absence of paired data set, which makes traditional supervised learning techniques not suitable. In this work, we formulate the problem as image translation from unpaired data and employ CycleGANs to solve the sensor modeling problem for LiDAR, to produce realistic LiDAR from simulated LiDAR (sim2real). Further, we generate high-resolution, realistic LiDAR from lower resolution one (real2real). The LiDAR 3D point cloud is processed in Bird-eye View and Polar 2D representations. The experimental results show a high potential of the proposed approach.
     </details>
 
@@ -136,7 +137,7 @@
 
 - **DeepRoad: GAN-based Metamorphic Autonomous Driving System Testing**.
     <details span>
-    <summary><b>Abstract</b></summary>
+    <summary>Abstract</summary>
     While Deep Neural Networks (DNNs) have established the fundamentals of DNN-based autonomous driving systems, they may exhibit erroneous behaviors and cause fatal accidents. To resolve the safety issues of autonomous driving systems, a recent set of testing techniques have been designed to automatically generate test cases, e.g., new input images transformed from the original ones. Unfortunately, many such generated input images often render inferior authenticity, lacking accurate semantic information of the driving scenes and hence compromising the resulting efficacy and reliability.In this paper, we propose DeepRoad, an unsupervised framework to automatically generate large amounts of accurate driving scenes to test the consistency of DNN-based autonomous driving systems across different scenes. In particular, DeepRoad delivers driving scenes with various weather conditions (including those with rather extreme conditions) by applying the Generative Adversarial Networks (GANs) along with the corresponding real-world weather scenes. Moreover, we have implemented DeepRoad to test three well-recognized DNN-based autonomous driving systems. Experimental results demonstrate that DeepRoad can detect thousands of behavioral inconsistencies in these systems.
 
     <div align=center><img src="./assets/data/DeepRoad.png" width="100%" /></div>
@@ -146,7 +147,7 @@
 
 - **Deep generative modeling of lidar data**.
     <details span>
-    <summary><b>Abstract</b></summary>
+    <summary>Abstract</summary>
     Building models capable of generating structured output is a key challenge for AI and robotics. While generative models have been explored on many types of data, little work has been done on synthesizing lidar scans, which play a key role in robot mapping and localization. In this work, we show that one can adapt deep generative models for this task by unravelling lidar scans into a 2D point map. Our approach can generate high quality samples, while simultaneously learning a meaningful latent representation of the data. We demonstrate significant improvements against state-of-the-art point cloud generation methods. Furthermore, we propose a novel data representation that augments the 2D signal with absolute positional information. We show that this helps robustness to noisy and imputed input; the learned model can recover the underlying lidar scan from seemingly uninformative data.
 
     <div align=center><img src="./assets/data/LiDARGAN.png" width="100%" /></div>
@@ -241,7 +242,7 @@
 
 - **StreetSurf: Extending Multi-view Implicit Surface Reconstruction to Street Views**.
     <details span>
-    <summary><b>Abstract</b></summary>
+    <summary>Abstract</summary>
     We present a novel multi-view implicit surface reconstruction technique, termed StreetSurf, that is readily applicable to street view images in widely-used autonomous driving datasets, such as Waymo-perception sequences, without necessarily requiring LiDAR data. As neural rendering research expands rapidly, its integration into street views has started to draw interests. Existing approaches on street views either mainly focus on novel view synthesis with little exploration of the scene geometry, or rely heavily on dense LiDAR data when investigating reconstruction. Neither of them investigates multi-view implicit surface reconstruction, especially under settings without LiDAR data. Our method extends prior object-centric neural surface reconstruction techniques to address the unique challenges posed by the unbounded street views that are captured with non-object-centric, long and narrow camera trajectories. We delimit the unbounded space into three parts, close-range, distant-view and sky, with aligned cuboid boundaries, and adapt cuboid/hyper-cuboid hash-grids along with road-surface initialization scheme for finer and disentangled representation. To further address the geometric errors arising from textureless regions and insufficient viewing angles, we adopt geometric priors that are estimated using general purpose monocular models. Coupled with our implementation of efficient and fine-grained multi-stage ray marching strategy, we achieve state of the art reconstruction quality in both geometry and appearance within only one to two hours of training time with a single RTX3090 GPU for each street view sequence. Furthermore, we demonstrate that the reconstructed implicit surfaces have rich potential for various downstream tasks, including ray tracing and LiDAR simulation.
 
     <div align=center><img src="./assets/data/StreetSurf.png" width="100%" /></div>
@@ -261,7 +262,7 @@
 
 - **RoMe: Towards Large Scale Road Surface Reconstruction via Mesh Representation**.
     <details span>
-    <summary><b>Abstract</b></summary>
+    <summary>Abstract</summary>
     In autonomous driving applications, accurate and efficient road surface reconstruction is paramount. This paper introduces RoMe, a novel framework designed for the robust reconstruction of large-scale road surfaces. Leveraging a unique mesh representation, RoMe ensures that the reconstructed road surfaces are accurate and seamlessly aligned with semantics. To address challenges in computational efficiency, we propose a waypoint sampling strategy, enabling RoMe to reconstruct vast environments by focusing on sub-areas and subsequently merging them. Furthermore, we incorporate an extrinsic optimization module to enhance the robustness against inaccuracies in extrinsic calibration. Our extensive evaluations of both public datasets and wild data underscore RoMe's superiority in terms of speed, accuracy, and robustness. For instance, it costs only 2 GPU hours to recover a road surface of 600*600 square meters from thousands of images. Notably, RoMe's capability extends beyond mere reconstruction, offering significant value for auto-labeling tasks in autonomous driving applications. 
 
     <div align=center><img src="./assets/data/RoMe.png" width="100%" /></div>
@@ -271,7 +272,7 @@
 
 - **S-NeRF: Neural Radiance Fields for Street Views**.
     <details span>
-    <summary><b>Abstract</b></summary>
+    <summary>Abstract</summary>
     Neural Radiance Fields (NeRFs) aim to synthesize novel views of objects and scenes, given the object-centric camera views with large overlaps. However, we conjugate that this paradigm does not fit the nature of the street views that are collected by many self-driving cars from the large-scale unbounded scenes. Also, the onboard cameras perceive scenes without much overlapping. Thus, existing NeRFs often produce blurs, 'floaters' and other artifacts on street-view synthesis. In this paper, we propose a new street-view NeRF (S-NeRF) that considers novel view synthesis of both the large-scale background scenes and the foreground moving vehicles jointly. Specifically, we improve the scene parameterization function and the camera poses for learning better neural representations from street views. We also use the the noisy and sparse LiDAR points to boost the training and learn a robust geometry and reprojection based confidence to address the depth outliers. Moreover, we extend our S-NeRF for reconstructing moving vehicles that is impracticable for conventional NeRFs. Thorough experiments on the large-scale driving datasets (e.g., nuScenes and Waymo) demonstrate that our method beats the state-of-the-art rivals by reducing 7% to 40% of the mean-squared error in the street-view synthesis and a 45% PSNR gain for the moving vehicles rendering.
 
     <div align=center><img src="./assets/data/S-NeRF.png" width="100%" /></div>
@@ -442,7 +443,7 @@
 
 - **Self-Supervised Pretraining of 3D Features on any Point-Cloud**.
     <details span>
-    <summary><b>Abstract</b></summary>
+    <summary>Abstract</summary>
     Pretraining on large labeled datasets is a prerequisite to achieve good performance in many computer vision tasks like 2D object recognition, video classification etc. However, pretraining is not widely used for 3D recognition tasks where state-of-the-art methods train models from scratch. A primary reason is the lack of large annotated datasets because 3D data is both difficult to acquire and time consuming to label. We present a simple self-supervised pertaining method that can work with any 3D data - single or multiview, indoor or outdoor, acquired by varied sensors, without 3D registration. We pretrain standard point cloud and voxel based model architectures, and show that joint pretraining further improves performance. We evaluate our models on 9 benchmarks for object detection, semantic segmentation, and object classification, where they achieve state-of-the-art results and can outperform supervised pretraining. We set a new state-of-the-art for object detection on ScanNet (69.0% mAP) and SUNRGBD (63.5% mAP).
 
     <div align=center><img src="./assets/training/DepthContrast.png" width="100%" /></div>
@@ -485,7 +486,7 @@
 
 - **PonderV2: Pave the Way for 3D Foundation Model with A Universal Pre-training Paradigm**.
     <details span>
-    <summary><b>Abstract</b></summary>
+    <summary>Abstract</summary>
     In contrast to numerous NLP and 2D computer vision foundational models, the learning of a robust and highly generalized 3D foundational model poses considerably greater challenges. This is primarily due to the inherent data variability and the diversity of downstream tasks. In this paper, we introduce a comprehensive 3D pre-training framework designed to facilitate the acquisition of efficient 3D representations, thereby establishing a pathway to 3D foundational models. Motivated by the fact that informative 3D features should be able to encode rich geometry and appearance cues that can be utilized to render realistic images, we propose a novel universal paradigm to learn point cloud representations by differentiable neural rendering, serving as a bridge between 3D and 2D worlds. We train a point cloud encoder within a devised volumetric neural renderer by comparing the rendered images with the real images. Notably, our approach demonstrates the seamless integration of the learned 3D encoder into diverse downstream tasks. These tasks encompass not only high-level challenges such as 3D detection and segmentation but also low-level objectives like 3D reconstruction and image synthesis, spanning both indoor and outdoor scenarios. Besides, we also illustrate the capability of pre-training a 2D backbone using the proposed universal methodology, surpassing conventional pre-training methods by a large margin. For the first time, PonderV2 achieves state-of-the-art performance on 11 indoor and outdoor benchmarks. The consistent improvements in various settings imply the effectiveness of the proposed method.
 
     <div align=center><img src="./assets/training/PonderV2.png" width="100%" /></div>
@@ -528,13 +529,23 @@
 ### World Model
 - **OccWorld: Learning a 3D Occupancy World Model for Autonomous Driving**.
     <details span>
-    <summary><b>Abstract</b></summary>
+    <summary>Abstract</summary>
     Understanding how the 3D scene evolves is vital for making decisions in autonomous driving. Most existing methods achieve this by predicting the movements of object boxes, which cannot capture more fine-grained scene information. In this paper, we explore a new framework of learning a world model, OccWorld, in the 3D Occupancy space to simultaneously predict the movement of the ego car and the evolution of the surrounding scenes. We propose to learn a world model based on 3D occupancy rather than 3D bounding boxes and segmentation maps for three reasons: 1) expressiveness. 3D occupancy can describe the more fine-grained 3D structure of the scene; 2) efficiency. 3D occupancy is more economical to obtain (e.g., from sparse LiDAR points). 3) versatility. 3D occupancy can adapt to both vision and LiDAR. To facilitate the modeling of the world evolution, we learn a reconstruction-based scene tokenizer on the 3D occupancy to obtain discrete scene tokens to describe the surrounding scenes. We then adopt a GPT-like spatial-temporal generative transformer to generate subsequent scene and ego tokens to decode the future occupancy and ego trajectory. Extensive experiments on the widely used nuScenes benchmark demonstrate the ability of OccWorld to effectively model the evolution of the driving scenes. OccWorld also produces competitive planning results without using instance and map supervision. 
 
     <div align=center><img src="./assets/training/OccWorld.png" width="100%" /></div>
     </details>
 
     [![arXiv](https://img.shields.io/badge/arXiv-2311.16038-b31b1b.svg)](https://arxiv.org/abs/2311.16038) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/wzzheng/OccWorld)
+
+- **Driving into the Future: Multiview Visual Forecasting and Planning with World Model for Autonomous Driving**.
+    <details span>
+    <summary>Abstract</summary>
+    In autonomous driving, predicting future events in advance and evaluating the foreseeable risks empowers autonomous vehicles to better plan their actions, enhancing safety and efficiency on the road. To this end, we propose Drive-WM, the first driving world model compatible with existing end-to-end planning models. Through a joint spatial-temporal modeling facilitated by view factorization, our model generates high-fidelity multiview videos in driving scenes. Building on its powerful generation ability, we showcase the potential of applying the world model for safe driving planning for the first time. Particularly, our Drive-WM enables driving into multiple futures based on distinct driving maneuvers, and determines the optimal trajectory according to the image-based rewards. Evaluation on real-world driving datasets verifies that our method could generate high-quality, consistent, and controllable multiview videos, opening up possibilities for real-world simulations and safe planning.
+
+    <div align=center><img src="./assets/training/Drive-WM.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2311.17918-b31b1b.svg)](https://arxiv.org/abs/2311.17918) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://drive-wm.github.io/) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/BraveGroup/Drive-WM)
 
 - **Learning Unsupervised World Models for Autonomous Driving via Discrete Diffusion**.
     <details span>
@@ -577,6 +588,16 @@
 
     [![arXiv](https://img.shields.io/badge/arXiv-2309.17080-b31b1b.svg)](https://arxiv.org/abs/2309.17080)
 
+- **TrafficBots: Towards World Models for Autonomous Driving Simulation and Motion Prediction**.
+    <details span>
+    <summary>Abstract</summary>
+    Data-driven simulation has become a favorable way to train and test autonomous driving algorithms. The idea of replacing the actual environment with a learned simulator has also been explored in model-based reinforcement learning in the context of world models. In this work, we show data-driven traffic simulation can be formulated as a world model. We present TrafficBots, a multi-agent policy built upon motion prediction and end-to-end driving, and based on TrafficBots we obtain a world model tailored for the planning module of autonomous vehicles. Existing data-driven traffic simulators are lacking configurability and scalability. To generate configurable behaviors, for each agent we introduce a destination as navigational information, and a time-invariant latent personality that specifies the behavioral style. To improve the scalability, we present a new scheme of positional encoding for angles, allowing all agents to share the same vectorized context and the use of an architecture based on dot-product attention. As a result, we can simulate all traffic participants seen in dense urban scenarios. Experiments on the Waymo open motion dataset show TrafficBots can simulate realistic multi-agent behaviors and achieve good performance on the motion prediction task.
+
+    <div align=center><img src="./assets/training/TrafficBots.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2303.04116-b31b1b.svg)](https://arxiv.org/abs/2303.04116) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://zhejz.github.io/trafficbots) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/zhejz/TrafficBots)
+
 👆 [Back to Top](#Table-of-Content)
 
 ## Adapatation
@@ -601,5 +622,99 @@
     </details>
 
     [![arXiv](https://img.shields.io/badge/arXiv-2306.13290-b31b1b.svg)](https://arxiv.org/abs/2306.13290)
+
+👆 [Back to Top](#Table-of-Content)
+
+### CLIP
+- **Convolutions Die Hard: Open-Vocabulary Segmentation with Single Frozen Convolutional CLIP**.
+    <details span>
+    <summary>Abstract</summary>
+    Open-vocabulary segmentation is a challenging task requiring segmenting and recognizing objects from an open set of categories. One way to address this challenge is to leverage multi-modal models, such as CLIP, to provide image and text features in a shared embedding space, which bridges the gap between closed-vocabulary and open-vocabulary recognition. Hence, existing methods often adopt a two-stage framework to tackle the problem, where the inputs first go through a mask generator and then through the CLIP model along with the predicted masks. This process involves extracting features from images multiple times, which can be ineffective and inefficient. By contrast, we propose to build everything into a single-stage framework using a shared Frozen Convolutional CLIP backbone, which not only significantly simplifies the current two-stage pipeline, but also remarkably yields a better accuracy-cost trade-off. The proposed FC-CLIP, benefits from the following observations: the frozen CLIP backbone maintains the ability of open-vocabulary classification and can also serve as a strong mask generator, and the convolutional CLIP generalizes well to a larger input resolution than the one used during contrastive image-text pretraining. When training on COCO panoptic data only and testing in a zero-shot manner, FC-CLIP achieve 26.8 PQ, 16.8 AP, and 34.1 mIoU on ADE20K, 18.2 PQ, 27.9 mIoU on Mapillary Vistas, 44.0 PQ, 26.8 AP, 56.2 mIoU on Cityscapes, outperforming the prior art by +4.2 PQ, +2.4 AP, +4.2 mIoU on ADE20K, +4.0 PQ on Mapillary Vistas and +20.1 PQ on Cityscapes, respectively. Additionally, the training and testing time of FC-CLIP is 7.5x and 6.6x significantly faster than the same prior art, while using 5.9x fewer parameters. FC-CLIP also sets a new state-of-the-art performance across various open-vocabulary semantic segmentation datasets.
+
+    <div align=center><img src="./assets/adaptation/FC-CLIP.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2308.02487-b31b1b.svg)](https://arxiv.org/abs/2308.02487) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/bytedance/fc-clip)
+
+- **OVO: Open-Vocabulary Occupancy**.
+    <details span>
+    <summary>Abstract</summary>
+    Semantic occupancy prediction aims to infer dense geometry and semantics of surroundings for an autonomous agent to operate safely in the 3D environment. Existing occupancy prediction methods are almost entirely trained on human-annotated volumetric data. Although of high quality, the generation of such 3D annotations is laborious and costly, restricting them to a few specific object categories in the training dataset. To address this limitation, this paper proposes Open Vocabulary Occupancy (OVO), a novel approach that allows semantic occupancy prediction of arbitrary classes but without the need for 3D annotations during training. Keys to our approach are (1) knowledge distillation from a pre-trained 2D open-vocabulary segmentation model to the 3D occupancy network, and (2) pixel-voxel filtering for high-quality training data generation. The resulting framework is simple, compact, and compatible with most state-of-the-art semantic occupancy prediction models. On NYUv2 and SemanticKITTI datasets, OVO achieves competitive performance compared to supervised semantic occupancy prediction approaches. Furthermore, we conduct extensive analyses and ablation studies to offer insights into the design of the proposed framework.
+
+    <div align=center><img src="./assets/adaptation/OVO.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2305.16133-b31b1b.svg)](https://arxiv.org/abs/2305.16133) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/dzcgaara/OVO-Open-Vocabulary-Occupancy)
+
+- **Open-Vocabulary Panoptic Segmentation with Text-to-Image Diffusion Models**.
+    <details span>
+    <summary>Abstract</summary>
+    We present ODISE: Open-vocabulary DIffusion-based panoptic SEgmentation, which unifies pre-trained text-image diffusion and discriminative models to perform open-vocabulary panoptic segmentation. Text-to-image diffusion models have the remarkable ability to generate high-quality images with diverse open-vocabulary language descriptions. This demonstrates that their internal representation space is highly correlated with open concepts in the real world. Text-image discriminative models like CLIP, on the other hand, are good at classifying images into open-vocabulary labels. We leverage the frozen internal representations of both these models to perform panoptic segmentation of any category in the wild. Our approach outperforms the previous state of the art by significant margins on both open-vocabulary panoptic and semantic segmentation tasks. In particular, with COCO training only, our method achieves 23.4 PQ and 30.0 mIoU on the ADE20K dataset, with 8.3 PQ and 7.9 mIoU absolute improvement over the previous state of the art.
+
+    <div align=center><img src="./assets/adaptation/ODISE.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2303.04803-b31b1b.svg)](https://arxiv.org/abs/2303.04803) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://jerryxu.net/ODISE/) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/NVlabs/ODISE)
+
+- **CLIP2Scene: Towards Label-efficient 3D Scene Understanding by CLIP**.
+    <details span>
+    <summary>Abstract</summary>
+    Contrastive Language-Image Pre-training (CLIP) achieves promising results in 2D zero-shot and few-shot learning. Despite the impressive performance in 2D, applying CLIP to help the learning in 3D scene understanding has yet to be explored. In this paper, we make the first attempt to investigate how CLIP knowledge benefits 3D scene understanding. We propose CLIP2Scene, a simple yet effective framework that transfers CLIP knowledge from 2D image-text pre-trained models to a 3D point cloud network. We show that the pre-trained 3D network yields impressive performance on various downstream tasks, i.e., annotation-free and fine-tuning with labelled data for semantic segmentation. Specifically, built upon CLIP, we design a Semantic-driven Cross-modal Contrastive Learning framework that pre-trains a 3D network via semantic and spatial-temporal consistency regularization. For the former, we first leverage CLIP's text semantics to select the positive and negative point samples and then employ the contrastive loss to train the 3D network. In terms of the latter, we force the consistency between the temporally coherent point cloud features and their corresponding image features. We conduct experiments on SemanticKITTI, nuScenes, and ScanNet. For the first time, our pre-trained network achieves annotation-free 3D semantic segmentation with 20.8% and 25.08% mIoU on nuScenes and ScanNet, respectively. When fine-tuned with 1% or 100% labelled data, our method significantly outperforms other self-supervised methods, with improvements of 8% and 1% mIoU, respectively. Furthermore, we demonstrate the generalizability for handling cross-domain datasets.
+
+    <div align=center><img src="./assets/adaptation/CLIP2Scene.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2301.04926-b31b1b.svg)](https://arxiv.org/abs/2301.04926) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/runnanchen/CLIP2Scene)
+
+- **MaskCLIP: Masked Self-Distillation Advances Contrastive Language-Image Pretraining**.
+    <details span>
+    <summary>Abstract</summary>
+    This paper presents a simple yet effective framework MaskCLIP, which incorporates a newly proposed masked self-distillation into contrastive language-image pretraining. The core idea of masked self-distillation is to distill representation from a full image to the representation predicted from a masked image. Such incorporation enjoys two vital benefits. First, masked self-distillation targets local patch representation learning, which is complementary to vision-language contrastive focusing on text-related representation. Second, masked self-distillation is also consistent with vision-language contrastive from the perspective of training objective as both utilize the visual encoder for feature aligning, and thus is able to learn local semantics getting indirect supervision from the language. We provide specially designed experiments with a comprehensive analysis to validate the two benefits. Symmetrically, we also introduce the local semantic supervision into the text branch, which further improves the pretraining performance. With extensive experiments, we show that MaskCLIP, when applied to various challenging downstream tasks, achieves superior results in linear probing, finetuning, and zero-shot performance with the guidance of the language encoder. 
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2208.12262-b31b1b.svg)](https://arxiv.org/abs/2208.12262) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://www.mmlab-ntu.com/project/maskclip/) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/chongzhou96/MaskCLIP)
+
+- **Language-driven Semantic Segmentation**.
+    <details span>
+    <summary>Abstract</summary>
+    We present LSeg, a novel model for language-driven semantic image segmentation. LSeg uses a text encoder to compute embeddings of descriptive input labels (e.g., "grass" or "building") together with a transformer-based image encoder that computes dense per-pixel embeddings of the input image. The image encoder is trained with a contrastive objective to align pixel embeddings to the text embedding of the corresponding semantic class. The text embeddings provide a flexible label representation in which semantically similar labels map to similar regions in the embedding space (e.g., "cat" and "furry"). This allows LSeg to generalize to previously unseen categories at test time, without retraining or even requiring a single additional training sample. We demonstrate that our approach achieves highly competitive zero-shot performance compared to existing zero- and few-shot semantic segmentation methods, and even matches the accuracy of traditional segmentation algorithms when a fixed label set is provided.
+
+    <div align=center><img src="./assets/adaptation/LSeg.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2201.03546-b31b1b.svg)](https://arxiv.org/abs/2201.03546) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/isl-org/lang-seg)
+
+👆 [Back to Top](#Table-of-Content)
+
+### LLMs-VLMs
+- **GPT-Driver: Learning to Drive with GPT**.
+    <details span>
+    <summary>Abstract</summary>
+    We present a simple yet effective approach that can transform the OpenAI GPT-3.5 model into a reliable motion planner for autonomous vehicles. Motion planning is a core challenge in autonomous driving, aiming to plan a driving trajectory that is safe and comfortable. Existing motion planners predominantly leverage heuristic methods to forecast driving trajectories, yet these approaches demonstrate insufficient generalization capabilities in the face of novel and unseen driving scenarios. In this paper, we propose a novel approach to motion planning that capitalizes on the strong reasoning capabilities and generalization potential inherent to Large Language Models (LLMs). The fundamental insight of our approach is the reformulation of motion planning as a language modeling problem, a perspective not previously explored. Specifically, we represent the planner inputs and outputs as language tokens, and leverage the LLM to generate driving trajectories through a language description of coordinate positions. Furthermore, we propose a novel prompting-reasoning-finetuning strategy to stimulate the numerical reasoning potential of the LLM. With this strategy, the LLM can describe highly precise trajectory coordinates and also its internal decision-making process in natural language. We evaluate our approach on the large-scale nuScenes dataset, and extensive experiments substantiate the effectiveness, generalization ability, and interpretability of our GPT-based motion planner.
+
+    <div align=center><img src="./assets/adaptation/GPT-Driver.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2310.01415-b31b1b.svg)](https://arxiv.org/abs/2310.01415) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://pointscoder.github.io/projects/gpt_driver/index.html) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/PointsCoder/GPT-Driver)
+
+- **LanguageMPC: Large Language Models as Decision Makers for Autonomous Driving**.
+    <details span>
+    <summary>Abstract</summary>
+    Existing learning-based autonomous driving (AD) systems face challenges in comprehending high-level information, generalizing to rare events, and providing interpretability. To address these problems, this work employs Large Language Models (LLMs) as a decision-making component for complex AD scenarios that require human commonsense understanding. We devise cognitive pathways to enable comprehensive reasoning with LLMs, and develop algorithms for translating LLM decisions into actionable driving commands. Through this approach, LLM decisions are seamlessly integrated with low-level controllers by guided parameter matrix adaptation. Extensive experiments demonstrate that our proposed method not only consistently surpasses baseline approaches in single-vehicle tasks, but also helps handle complex driving behaviors even multi-vehicle coordination, thanks to the commonsense reasoning capabilities of LLMs. This paper presents an initial step toward leveraging LLMs as effective decision-makers for intricate AD scenarios in terms of safety, efficiency, generalizability, and interoperability. We aspire for it to serve as inspiration for future research in this field.
+
+    <div align=center><img src="./assets/adaptation/LanguageMPC.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-TODO-b31b1b.svg)](https://arxiv.org/abs/2310.03026) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://sites.google.com/view/llm-mpc)
+
+- **Drive Like a Human: Rethinking Autonomous Driving with Large Language Models**.
+    <details span>
+    <summary>Abstract</summary>
+    In this paper, we explore the potential of using a large language model (LLM) to understand the driving environment in a human-like manner and analyze its ability to reason, interpret, and memorize when facing complex scenarios. We argue that traditional optimization-based and modular autonomous driving (AD) systems face inherent performance limitations when dealing with long-tail corner cases. To address this problem, we propose that an ideal AD system should drive like a human, accumulating experience through continuous driving and using common sense to solve problems. To achieve this goal, we identify three key abilities necessary for an AD system: reasoning, interpretation, and memorization. We demonstrate the feasibility of employing an LLM in driving scenarios by building a closed-loop system to showcase its comprehension and environment-interaction abilities. Our extensive experiments show that the LLM exhibits the impressive ability to reason and solve long-tailed cases, providing valuable insights for the development of human-like autonomous driving. 
+
+    <div align=center><img src="./assets/adaptation/Drive-like-human.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2307.07162-b31b1b.svg)](https://arxiv.org/abs/2307.07162) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/PJLab-ADG/DriveLikeAHuman)
 
 👆 [Back to Top](#Table-of-Content)
