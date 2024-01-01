@@ -22,7 +22,7 @@
 - [Adaptation](#adaptation)
   - [SAM](#sam)
   - [CLIP](#clip)
-  - [LLMs & VLMs](#llm-vlm)
+  - [LLMs & VLMs](#llms-vlms)
 
 ## Related Survey Papers
 - **Foundation Models for Decision Making: Problems, Methods, and Opportunities**.
