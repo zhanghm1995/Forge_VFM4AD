@@ -207,15 +207,6 @@
 
 
 ### NeRF
-- **READ: Large-Scale Neural Scene Rendering for Autonomous Driving**.
-    <details span>
-    <summary>Abstract</summary>
-    Synthesizing free-view photo-realistic images is an important task in multimedia. With the development of advanced driver assistance systems~(ADAS) and their applications in autonomous vehicles, experimenting with different scenarios becomes a challenge. Although the photo-realistic street scenes can be synthesized by image-to-image translation methods, which cannot produce coherent scenes due to the lack of 3D information. In this paper, a large-scale neural rendering method is proposed to synthesize the autonomous driving scene~(READ), which makes it possible to synthesize large-scale driving scenarios on a PC through a variety of sampling schemes. In order to represent driving scenarios, we propose an {\omega} rendering network to learn neural descriptors from sparse point clouds. Our model can not only synthesize realistic driving scenes but also stitch and edit driving scenes. Experiments show that our model performs well in large-scale driving scenarios.
-
-    <div align=center><img src="./assets/READ.png" width="100%" /></div>
-    </details>
-
-    [![arXiv](https://img.shields.io/badge/arXiv-2205.05509-b31b1b.svg)](https://arxiv.org/abs/2205.05509) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/JOP-Lee/READ)
 
 
 - **UniSim: Synthesizing Data with Perception Annotations Using Diffusion Models**.
@@ -248,6 +239,16 @@
 
     [![arXiv](https://img.shields.io/badge/arXiv-2304.14811-b31b1b.svg)](https://arxiv.org/abs/2304.14811)
 
+- **StreetSurf: Extending Multi-view Implicit Surface Reconstruction to Street Views**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    We present a novel multi-view implicit surface reconstruction technique, termed StreetSurf, that is readily applicable to street view images in widely-used autonomous driving datasets, such as Waymo-perception sequences, without necessarily requiring LiDAR data. As neural rendering research expands rapidly, its integration into street views has started to draw interests. Existing approaches on street views either mainly focus on novel view synthesis with little exploration of the scene geometry, or rely heavily on dense LiDAR data when investigating reconstruction. Neither of them investigates multi-view implicit surface reconstruction, especially under settings without LiDAR data. Our method extends prior object-centric neural surface reconstruction techniques to address the unique challenges posed by the unbounded street views that are captured with non-object-centric, long and narrow camera trajectories. We delimit the unbounded space into three parts, close-range, distant-view and sky, with aligned cuboid boundaries, and adapt cuboid/hyper-cuboid hash-grids along with road-surface initialization scheme for finer and disentangled representation. To further address the geometric errors arising from textureless regions and insufficient viewing angles, we adopt geometric priors that are estimated using general purpose monocular models. Coupled with our implementation of efficient and fine-grained multi-stage ray marching strategy, we achieve state of the art reconstruction quality in both geometry and appearance within only one to two hours of training time with a single RTX3090 GPU for each street view sequence. Furthermore, we demonstrate that the reconstructed implicit surfaces have rich potential for various downstream tasks, including ray tracing and LiDAR simulation.
+
+    <div align=center><img src="./assets/data/StreetSurf.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2306.04988-b31b1b.svg)](https://arxiv.org/abs/2306.04988) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://ventusff.github.io/streetsurf_web/) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/pjlab-ADG/neuralsim)
+
 - **MapNeRF: Incorporating Map Priors into Neural Radiance Fields for Driving View Simulation**.
     <details span>
     <summary>Abstract</summary>
@@ -258,6 +259,26 @@
 
     [![arXiv](https://img.shields.io/badge/arXiv-2307.14981-b31b1b.svg)](https://arxiv.org/abs/2307.14981) [![WEB Page](https://img.shields.io/badge/Video-Page-b31b1b.svg)](https://www.youtube.com/watch?v=jEQWr-Rfh3A&feature=youtu.be)
 
+- **RoMe: Towards Large Scale Road Surface Reconstruction via Mesh Representation**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    In autonomous driving applications, accurate and efficient road surface reconstruction is paramount. This paper introduces RoMe, a novel framework designed for the robust reconstruction of large-scale road surfaces. Leveraging a unique mesh representation, RoMe ensures that the reconstructed road surfaces are accurate and seamlessly aligned with semantics. To address challenges in computational efficiency, we propose a waypoint sampling strategy, enabling RoMe to reconstruct vast environments by focusing on sub-areas and subsequently merging them. Furthermore, we incorporate an extrinsic optimization module to enhance the robustness against inaccuracies in extrinsic calibration. Our extensive evaluations of both public datasets and wild data underscore RoMe's superiority in terms of speed, accuracy, and robustness. For instance, it costs only 2 GPU hours to recover a road surface of 600*600 square meters from thousands of images. Notably, RoMe's capability extends beyond mere reconstruction, offering significant value for auto-labeling tasks in autonomous driving applications. 
+
+    <div align=center><img src="./assets/data/RoMe.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2306.11368-b31b1b.svg)](https://arxiv.org/abs/2306.11368) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/DRosemei/RoMe)
+
+- **S-NeRF: Neural Radiance Fields for Street Views**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    Neural Radiance Fields (NeRFs) aim to synthesize novel views of objects and scenes, given the object-centric camera views with large overlaps. However, we conjugate that this paradigm does not fit the nature of the street views that are collected by many self-driving cars from the large-scale unbounded scenes. Also, the onboard cameras perceive scenes without much overlapping. Thus, existing NeRFs often produce blurs, 'floaters' and other artifacts on street-view synthesis. In this paper, we propose a new street-view NeRF (S-NeRF) that considers novel view synthesis of both the large-scale background scenes and the foreground moving vehicles jointly. Specifically, we improve the scene parameterization function and the camera poses for learning better neural representations from street views. We also use the the noisy and sparse LiDAR points to boost the training and learn a robust geometry and reprojection based confidence to address the depth outliers. Moreover, we extend our S-NeRF for reconstructing moving vehicles that is impracticable for conventional NeRFs. Thorough experiments on the large-scale driving datasets (e.g., nuScenes and Waymo) demonstrate that our method beats the state-of-the-art rivals by reducing 7% to 40% of the mean-squared error in the street-view synthesis and a 45% PSNR gain for the moving vehicles rendering.
+
+    <div align=center><img src="./assets/data/S-NeRF.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2303.00749-b31b1b.svg)](https://arxiv.org/abs/2303.00749) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://ziyang-xie.github.io/s-nerf) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/fudan-zvg/S-NeRF)
+
 - **LiDAR-NeRF: Novel LiDAR View Synthesis via Neural Radiance Fields**.
     <details span>
     <summary>Abstract</summary>
@@ -267,6 +288,17 @@
     </details>
 
     [![arXiv](https://img.shields.io/badge/arXiv-2304.10406-b31b1b.svg)](https://arxiv.org/abs/2304.10406) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://tangtaogo.github.io/lidar-nerf-website/) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/tangtaogo/lidar-nerf)
+
+- **READ: Large-Scale Neural Scene Rendering for Autonomous Driving**.
+    <details span>
+    <summary>Abstract</summary>
+    Synthesizing free-view photo-realistic images is an important task in multimedia. With the development of advanced driver assistance systems~(ADAS) and their applications in autonomous vehicles, experimenting with different scenarios becomes a challenge. Although the photo-realistic street scenes can be synthesized by image-to-image translation methods, which cannot produce coherent scenes due to the lack of 3D information. In this paper, a large-scale neural rendering method is proposed to synthesize the autonomous driving scene~(READ), which makes it possible to synthesize large-scale driving scenarios on a PC through a variety of sampling schemes. In order to represent driving scenarios, we propose an {\omega} rendering network to learn neural descriptors from sparse point clouds. Our model can not only synthesize realistic driving scenes but also stitch and edit driving scenes. Experiments show that our model performs well in large-scale driving scenarios.
+
+    <div align=center><img src="./assets/READ.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2205.05509-b31b1b.svg)](https://arxiv.org/abs/2205.05509) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/JOP-Lee/READ)
+
 
 👆 [Back to Top](#Table-of-Content)
 
@@ -408,6 +440,15 @@
 
     [![arXiv](https://img.shields.io/badge/CVF-CVPR-6196CA.svg)](https://openaccess.thecvf.com/content/CVPR2023/html/Nunes_Temporal_Consistent_3D_LiDAR_Representation_Learning_for_Semantic_Perception_in_CVPR_2023_paper.html)  [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/PRBonn/TARL)
 
+- **Self-Supervised Pretraining of 3D Features on any Point-Cloud**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    Pretraining on large labeled datasets is a prerequisite to achieve good performance in many computer vision tasks like 2D object recognition, video classification etc. However, pretraining is not widely used for 3D recognition tasks where state-of-the-art methods train models from scratch. A primary reason is the lack of large annotated datasets because 3D data is both difficult to acquire and time consuming to label. We present a simple self-supervised pertaining method that can work with any 3D data - single or multiview, indoor or outdoor, acquired by varied sensors, without 3D registration. We pretrain standard point cloud and voxel based model architectures, and show that joint pretraining further improves performance. We evaluate our models on 9 benchmarks for object detection, semantic segmentation, and object classification, where they achieve state-of-the-art results and can outperform supervised pretraining. We set a new state-of-the-art for object detection on ScanNet (69.0% mAP) and SUNRGBD (63.5% mAP).
+
+    <div align=center><img src="./assets/training/DepthContrast.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2101.02691-b31b1b.svg)](https://arxiv.org/abs/2101.02691) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/facebookresearch/DepthContrast)
 
 - **PointContrast: Unsupervised Pre-training for 3D Point Cloud Understanding**.
     <details span>
@@ -422,16 +463,6 @@
 👆 [Back to Top](#Table-of-Content)
 
 ### Rendering
-- **Ponder: Point Cloud Pre-training via Neural Rendering**.
-    <details span>
-    <summary>Abstract</summary>
-    We propose a novel approach to self-supervised learning of point cloud representations by differentiable neural rendering. Motivated by the fact that informative point cloud features should be able to encode rich geometry and appearance cues and render realistic images, we train a point-cloud encoder within a devised point-based neural renderer by comparing the rendered images with real images on massive RGB-D data. The learned point-cloud encoder can be easily integrated into various downstream tasks, including not only high-level tasks like 3D detection and segmentation, but low-level tasks like 3D reconstruction and image synthesis. Extensive experiments on various tasks demonstrate the superiority of our approach compared to existing pre-training methods.
-
-    <div align=center><img src="./assets/Ponder.png" width="100%" /></div>
-    </details>
-
-    [![arXiv](https://img.shields.io/badge/arXiv-2301.00157-b31b1b.svg)](https://arxiv.org/abs/2301.00157)
-    
 - **PRED: Pre-training via Semantic Rendering on LiDAR Point Clouds**.
     <details span>
     <summary>Abstract</summary>
@@ -442,6 +473,36 @@
 
     [![arXiv](https://img.shields.io/badge/arXiv-2311.04501-b31b1b.svg)](https://arxiv.org/abs/2311.04501) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/PRED4pc/PRED)
 
+- **SelfOcc: Self-Supervised Vision-Based 3D Occupancy Prediction**.
+    <details span>
+    <summary>Abstract</summary>
+    3D occupancy prediction is an important task for the robustness of vision-centric autonomous driving, which aims to predict whether each point is occupied in the surrounding 3D space. Existing methods usually require 3D occupancy labels to produce meaningful results. However, it is very laborious to annotate the occupancy status of each voxel. In this paper, we propose SelfOcc to explore a self-supervised way to learn 3D occupancy using only video sequences. We first transform the images into the 3D space (e.g., bird's eye view) to obtain 3D representation of the scene. We directly impose constraints on the 3D representations by treating them as signed distance fields. We can then render 2D images of previous and future frames as self-supervision signals to learn the 3D representations. We propose an MVS-embedded strategy to directly optimize the SDF-induced weights with multiple depth proposals. Our SelfOcc outperforms the previous best method SceneRF by 58.7% using a single frame as input on SemanticKITTI and is the first self-supervised work that produces reasonable 3D occupancy for surround cameras on nuScenes. SelfOcc produces high-quality depth and achieves state-of-the-art results on novel depth synthesis, monocular depth estimation, and surround-view depth estimation on the SemanticKITTI, KITTI-2015, and nuScenes, respectively.
+
+    <div align=center><img src="./assets/SelfOcc.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2311.12754-b31b1b.svg)](https://arxiv.org/abs/2311.12754) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://huang-yh.github.io/SelfOcc/) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/huang-yh/SelfOcc)
+
+- **PonderV2: Pave the Way for 3D Foundation Model with A Universal Pre-training Paradigm**.
+    <details span>
+    <summary><b>Abstract</b></summary>
+    In contrast to numerous NLP and 2D computer vision foundational models, the learning of a robust and highly generalized 3D foundational model poses considerably greater challenges. This is primarily due to the inherent data variability and the diversity of downstream tasks. In this paper, we introduce a comprehensive 3D pre-training framework designed to facilitate the acquisition of efficient 3D representations, thereby establishing a pathway to 3D foundational models. Motivated by the fact that informative 3D features should be able to encode rich geometry and appearance cues that can be utilized to render realistic images, we propose a novel universal paradigm to learn point cloud representations by differentiable neural rendering, serving as a bridge between 3D and 2D worlds. We train a point cloud encoder within a devised volumetric neural renderer by comparing the rendered images with the real images. Notably, our approach demonstrates the seamless integration of the learned 3D encoder into diverse downstream tasks. These tasks encompass not only high-level challenges such as 3D detection and segmentation but also low-level objectives like 3D reconstruction and image synthesis, spanning both indoor and outdoor scenarios. Besides, we also illustrate the capability of pre-training a 2D backbone using the proposed universal methodology, surpassing conventional pre-training methods by a large margin. For the first time, PonderV2 achieves state-of-the-art performance on 11 indoor and outdoor benchmarks. The consistent improvements in various settings imply the effectiveness of the proposed method.
+
+    <div align=center><img src="./assets/training/PonderV2.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2310.08586-b31b1b.svg)](https://arxiv.org/abs/2310.08586) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/OpenGVLab/PonderV2)
+
+- **Ponder: Point Cloud Pre-training via Neural Rendering**.
+    <details span>
+    <summary>Abstract</summary>
+    We propose a novel approach to self-supervised learning of point cloud representations by differentiable neural rendering. Motivated by the fact that informative point cloud features should be able to encode rich geometry and appearance cues and render realistic images, we train a point-cloud encoder within a devised point-based neural renderer by comparing the rendered images with real images on massive RGB-D data. The learned point-cloud encoder can be easily integrated into various downstream tasks, including not only high-level tasks like 3D detection and segmentation, but low-level tasks like 3D reconstruction and image synthesis. Extensive experiments on various tasks demonstrate the superiority of our approach compared to existing pre-training methods.
+
+    <div align=center><img src="./assets/Ponder.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2301.00157-b31b1b.svg)](https://arxiv.org/abs/2301.00157)
+    
 - **UniPAD: A Universal Pre-training Paradigm for Autonomous Driving**.
     <details span>
     <summary>Abstract</summary>
@@ -463,26 +524,17 @@
 
     [![arXiv](https://img.shields.io/badge/arXiv-2309.09502-b31b1b.svg)](https://arxiv.org/abs/2309.09502) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/pmj110119/RenderOcc)
 
-- **SelfOcc: Self-Supervised Vision-Based 3D Occupancy Prediction**.
-    <details span>
-    <summary>Abstract</summary>
-    3D occupancy prediction is an important task for the robustness of vision-centric autonomous driving, which aims to predict whether each point is occupied in the surrounding 3D space. Existing methods usually require 3D occupancy labels to produce meaningful results. However, it is very laborious to annotate the occupancy status of each voxel. In this paper, we propose SelfOcc to explore a self-supervised way to learn 3D occupancy using only video sequences. We first transform the images into the 3D space (e.g., bird's eye view) to obtain 3D representation of the scene. We directly impose constraints on the 3D representations by treating them as signed distance fields. We can then render 2D images of previous and future frames as self-supervision signals to learn the 3D representations. We propose an MVS-embedded strategy to directly optimize the SDF-induced weights with multiple depth proposals. Our SelfOcc outperforms the previous best method SceneRF by 58.7% using a single frame as input on SemanticKITTI and is the first self-supervised work that produces reasonable 3D occupancy for surround cameras on nuScenes. SelfOcc produces high-quality depth and achieves state-of-the-art results on novel depth synthesis, monocular depth estimation, and surround-view depth estimation on the SemanticKITTI, KITTI-2015, and nuScenes, respectively.
-
-    <div align=center><img src="./assets/SelfOcc.png" width="100%" /></div>
-    </details>
-
-    [![arXiv](https://img.shields.io/badge/arXiv-2311.12754-b31b1b.svg)](https://arxiv.org/abs/2311.12754) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://huang-yh.github.io/SelfOcc/) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/huang-yh/SelfOcc)
 
 ### World Model
-- **GAIA-1: A Generative World Model for Autonomous Driving**.
+- **OccWorld: Learning a 3D Occupancy World Model for Autonomous Driving**.
     <details span>
-    <summary>Abstract</summary>
-    Autonomous driving promises transformative improvements to transportation, but building systems capable of safely navigating the unstructured complexity of real-world scenarios remains challenging. A critical problem lies in effectively predicting the various potential outcomes that may emerge in response to the vehicle's actions as the world evolves. To address this challenge, we introduce GAIA-1 ('Generative AI for Autonomy'), a generative world model that leverages video, text, and action inputs to generate realistic driving scenarios while offering fine-grained control over ego-vehicle behavior and scene features. Our approach casts world modeling as an unsupervised sequence modeling problem by mapping the inputs to discrete tokens, and predicting the next token in the sequence. Emerging properties from our model include learning high-level structures and scene dynamics, contextual awareness, generalization, and understanding of geometry. The power of GAIA-1's learned representation that captures expectations of future events, combined with its ability to generate realistic samples, provides new possibilities for innovation in the field of autonomy, enabling enhanced and accelerated training of autonomous driving technology.
+    <summary><b>Abstract</b></summary>
+    Understanding how the 3D scene evolves is vital for making decisions in autonomous driving. Most existing methods achieve this by predicting the movements of object boxes, which cannot capture more fine-grained scene information. In this paper, we explore a new framework of learning a world model, OccWorld, in the 3D Occupancy space to simultaneously predict the movement of the ego car and the evolution of the surrounding scenes. We propose to learn a world model based on 3D occupancy rather than 3D bounding boxes and segmentation maps for three reasons: 1) expressiveness. 3D occupancy can describe the more fine-grained 3D structure of the scene; 2) efficiency. 3D occupancy is more economical to obtain (e.g., from sparse LiDAR points). 3) versatility. 3D occupancy can adapt to both vision and LiDAR. To facilitate the modeling of the world evolution, we learn a reconstruction-based scene tokenizer on the 3D occupancy to obtain discrete scene tokens to describe the surrounding scenes. We then adopt a GPT-like spatial-temporal generative transformer to generate subsequent scene and ego tokens to decode the future occupancy and ego trajectory. Extensive experiments on the widely used nuScenes benchmark demonstrate the ability of OccWorld to effectively model the evolution of the driving scenes. OccWorld also produces competitive planning results without using instance and map supervision. 
 
-    <div align=center><img src="./assets/GAIA-1.png" width="100%" /></div>
+    <div align=center><img src="./assets/training/OccWorld.png" width="100%" /></div>
     </details>
 
-    [![arXiv](https://img.shields.io/badge/arXiv-2309.17080-b31b1b.svg)](https://arxiv.org/abs/2309.17080)
+    [![arXiv](https://img.shields.io/badge/arXiv-2311.16038-b31b1b.svg)](https://arxiv.org/abs/2311.16038) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/wzzheng/OccWorld)
 
 - **Learning Unsupervised World Models for Autonomous Driving via Discrete Diffusion**.
     <details span>
@@ -514,6 +566,16 @@
     </details>
 
     [![arXiv](https://img.shields.io/badge/arXiv-2311.11762-b31b1b.svg)](https://arxiv.org/abs/2311.11762)
+
+- **GAIA-1: A Generative World Model for Autonomous Driving**.
+    <details span>
+    <summary>Abstract</summary>
+    Autonomous driving promises transformative improvements to transportation, but building systems capable of safely navigating the unstructured complexity of real-world scenarios remains challenging. A critical problem lies in effectively predicting the various potential outcomes that may emerge in response to the vehicle's actions as the world evolves. To address this challenge, we introduce GAIA-1 ('Generative AI for Autonomy'), a generative world model that leverages video, text, and action inputs to generate realistic driving scenarios while offering fine-grained control over ego-vehicle behavior and scene features. Our approach casts world modeling as an unsupervised sequence modeling problem by mapping the inputs to discrete tokens, and predicting the next token in the sequence. Emerging properties from our model include learning high-level structures and scene dynamics, contextual awareness, generalization, and understanding of geometry. The power of GAIA-1's learned representation that captures expectations of future events, combined with its ability to generate realistic samples, provides new possibilities for innovation in the field of autonomy, enabling enhanced and accelerated training of autonomous driving technology.
+
+    <div align=center><img src="./assets/GAIA-1.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2309.17080-b31b1b.svg)](https://arxiv.org/abs/2309.17080)
 
 👆 [Back to Top](#Table-of-Content)
 
