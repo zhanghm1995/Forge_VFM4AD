@@ -4,15 +4,18 @@
 
 **We greatly appreciate any contributions via PRs, issues, emails, or other methods.**
 
+⭐ Welcome to star this repository! ⭐
+
 ## News 📰
 - **[2023/12/19]** Initial commit.
 
 ## Table of Content
 - [Related Survey Papers](#related-survey-papers)
-- [Data Generation](#data-generation)
+- [Data Preparation](#data-preparation)
   - [GAN](#gan)
   - [Diffusion](#diffusion)
   - [NeRF](#nerf)
+  - [3D Gaussian Splatting](#3d-gaussian-splatting)
 - [Training Paradigm](#training-paradigm)
   - [Reconstruction](#reconstruction)
   - [Contrastive](#contrastive)
@@ -93,7 +96,7 @@
 
 👆 [Back to Top](#Table-of-Content)
 
-## Data Generation
+## Data Preparation
 ### GAN
 - **DriveGAN: Towards a Controllable High-Quality Neural Simulation**. 
     <details span>
@@ -300,6 +303,39 @@
 
     [![arXiv](https://img.shields.io/badge/arXiv-2205.05509-b31b1b.svg)](https://arxiv.org/abs/2205.05509) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/JOP-Lee/READ)
 
+
+👆 [Back to Top](#Table-of-Content)
+
+### 3D Gaussian Splatting
+- **Street Gaussians for Modeling Dynamic Urban Scenes**.
+    <details span>
+    <summary>Abstract</summary>
+    This paper aims to tackle the problem of modeling dynamic urban street scenes from monocular videos. Recent methods extend NeRF by incorporating tracked vehicle poses to animate vehicles, enabling photo-realistic view synthesis of dynamic urban street scenes. However, significant limitations are their slow training and rendering speed, coupled with the critical need for high precision in tracked vehicle poses. We introduce Street Gaussians, a new explicit scene representation that tackles all these limitations. Specifically, the dynamic urban street is represented as a set of point clouds equipped with semantic logits and 3D Gaussians, each associated with either a foreground vehicle or the background. To model the dynamics of foreground object vehicles, each object point cloud is optimized with optimizable tracked poses, along with a dynamic spherical harmonics model for the dynamic appearance. The explicit representation allows easy composition of object vehicles and background, which in turn allows for scene editing operations and rendering at 133 FPS (1066×1600 resolution) within half an hour of training. The proposed method is evaluated on multiple challenging benchmarks, including KITTI and Waymo Open datasets. Experiments show that the proposed method consistently outperforms state-of-the-art methods across all datasets. Furthermore, the proposed representation delivers performance on par with that achieved using precise ground-truth poses, despite relying only on poses from an off-the-shelf tracker. 
+
+    <div align=center><img src="./assets/data/Street-Gaussians.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2401.01339-b31b1b.svg)](https://arxiv.org/abs/2401.01339) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://zju3dv.github.io/street_gaussians/) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/zju3dv/street_gaussians)
+
+- **DrivingGaussian: Composite Gaussian Splatting for Surrounding Dynamic Autonomous Driving Scenes**.
+    <details span>
+    <summary>Abstract</summary>
+    We present DrivingGaussian, an efficient and effective framework for surrounding dynamic autonomous driving scenes. For complex scenes with moving objects, we first sequentially and progressively model the static background of the entire scene with incremental static 3D Gaussians. We then leverage a composite dynamic Gaussian graph to handle multiple moving objects, individually reconstructing each object and restoring their accurate positions and occlusion relationships within the scene. We further use a LiDAR prior for Gaussian Splatting to reconstruct scenes with greater details and maintain panoramic consistency. DrivingGaussian outperforms existing methods in driving scene reconstruction and enables photorealistic surround-view synthesis with high-fidelity and multi-camera consistency.
+
+    <div align=center><img src="./assets/data/DrivingGaussian.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2312.07920-b31b1b.svg)](https://arxiv.org/abs/2312.07920) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://pkuvdig.github.io/DrivingGaussian/)
+
+- **Periodic Vibration Gaussian: Dynamic Urban Scene Reconstruction and Real-time Rendering**.
+    <details span>
+    <summary>Abstract</summary>
+    Modeling dynamic, large-scale urban scenes is challenging due to their highly intricate geometric structures and unconstrained dynamics in both space and time. Prior methods often employ high-level architectural priors, separating static and dynamic elements, resulting in suboptimal capture of their synergistic interactions. To address this challenge, we present a unified representation model, called Periodic Vibration Gaussian (PVG). PVG builds upon the efficient 3D Gaussian splatting technique, originally designed for static scene representation, by introducing periodic vibration-based temporal dynamics. This innovation enables PVG to elegantly and uniformly represent the characteristics of various objects and elements in dynamic urban scenes. To enhance temporally coherent representation learning with sparse training data, we introduce a novel flow-based temporal smoothing mechanism and a position-aware adaptive control strategy. Extensive experiments on Waymo Open Dataset and KITTI benchmarks demonstrate that PVG surpasses state-of-the-art alternatives in both reconstruction and novel view synthesis for both dynamic and static scenes. Notably, PVG achieves this without relying on manually labeled object bounding boxes or expensive optical flow estimation. Moreover, PVG exhibits 50/6000-fold acceleration in training/rendering over the best alternative.
+
+    <div align=center><img src="./assets/data/PVG.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2311.18561-b31b1b.svg)](https://arxiv.org/abs/2311.18561) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://fudan-zvg.github.io/PVG/)
 
 👆 [Back to Top](#Table-of-Content)
 
