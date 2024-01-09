@@ -6,6 +6,8 @@
 
 ⭐ Welcome to star this repository! ⭐
 
+![](./assets/teaser.png "Forging Vision Foundation Models for Autonomous Driving: Challenges, Methodologies, and Opportunities")
+
 ## Citation
 If this work is helpful for your research, please consider citing the following BibTeX entry.
 ``` bibtex
