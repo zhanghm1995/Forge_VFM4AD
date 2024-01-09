@@ -6,8 +6,14 @@
 
 ⭐ Welcome to star this repository! ⭐
 
+## Citation
+If this work is helpful for your research, please consider citing the following BibTeX entry.
+``` bibtex
+TBD
+```
+
 ## News 📰
-- **[2023/12/19]** Initial commit.
+- `[2023/12/19]` Initial commit.
 
 ## Table of Content
 - [Related Survey Papers](#related-survey-papers)
@@ -16,16 +22,16 @@
   - [Diffusion](#diffusion)
   - [NeRF](#nerf)
   - [3D Gaussian Splatting](#3d-gaussian-splatting)
-- [Training Paradigm](#training-paradigm)
-  - [Reconstruction](#reconstruction)
+- [Self-supervised Training](#self-supervised-training)
   - [Contrastive](#contrastive)
-  - [Rendering](#rendering)
+  - [Reconstruction](#reconstruction)
   - [Distillation](#distillation)
+  - [Rendering](#rendering)
   - [World Model](#world-model)
 - [Adaptation](#adaptation)
-  - [SAM](#sam)
-  - [CLIP](#clip)
-  - [LLMs & VLMs](#llms-vlms)
+  - [Vision Foundation Models](#vision-foundation-models)
+  - [Large Language Models](#large-language-models)
+  - [Multimodal Foundation Models](#multimodal-foundation-models)
 
 ## Related Survey Papers
 - **Foundation Models for Decision Making: Problems, Methods, and Opportunities**.
@@ -339,7 +345,7 @@
 
 👆 [Back to Top](#Table-of-Content)
 
-## Training Paradigm
+## Self-supervised Training
 ### Contrastive
 - **BEVContrast: Self-Supervision in BEV Space for Automotive Lidar Point Clouds**.
     <details span>
@@ -350,6 +356,16 @@
     </details>
 
     [![arXiv](https://img.shields.io/badge/arXiv-2310.17281-b31b1b.svg)](https://arxiv.org/abs/2310.17281) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/valeoai/BEVContrast)
+
+- **AD-PT: Autonomous Driving Pre-Training with Large-scale Point Cloud Dataset**.
+    <details span>
+    <summary>Abstract</summary>
+    It is a long-term vision for Autonomous Driving (AD) community that the perception models can learn from a large-scale point cloud dataset, to obtain unified representations that can achieve promising results on different tasks or benchmarks. Previous works mainly focus on the self-supervised pre-training pipeline, meaning that they perform the pre-training and fine-tuning on the same benchmark, which is difficult to attain the performance scalability and cross-dataset application for the pre-training checkpoint. In this paper, for the first time, we are committed to building a large-scale pre-training point-cloud dataset with diverse data distribution, and meanwhile learning generalizable representations from such a diverse pre-training dataset. We formulate the point-cloud pre-training task as a semi-supervised problem, which leverages the few-shot labeled and massive unlabeled point-cloud data to generate the unified backbone representations that can be directly applied to many baseline models and benchmarks, decoupling the AD-related pre-training process and downstream fine-tuning task. During the period of backbone pre-training, by enhancing the scene- and instance-level distribution diversity and exploiting the backbone's ability to learn from unknown instances, we achieve significant performance gains on a series of downstream perception benchmarks including Waymo, nuScenes, and KITTI, under different baseline models like PV-RCNN++, SECOND, CenterPoint.
+
+    <div align=center><img src="./assets/training/AD-PT.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2306.00612-b31b1b.svg)](https://arxiv.org/abs/2306.00612) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://jiakangyuan.github.io/AD-PT.github.io/) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/PJLab-ADG/3DTrans)
 
 - **SegContrast: 3D Point Cloud Feature Representation Learning Through Self-Supervised Segment Discrimination**.
     <details span>
@@ -370,6 +386,16 @@
     </details>
 
     [![arXiv](https://img.shields.io/badge/CVF-CVPR-6196CA.svg)](https://openaccess.thecvf.com/content/CVPR2023/html/Nunes_Temporal_Consistent_3D_LiDAR_Representation_Learning_for_Semantic_Perception_in_CVPR_2023_paper.html)  [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/PRBonn/TARL)
+
+- **SimIPU: Simple 2D Image and 3D Point Cloud Unsupervised Pre-Training for Spatial-Aware Visual Representations**.
+    <details span>
+    <summary>Abstract</summary>
+    Pre-training has become a standard paradigm in many computer vision tasks. However, most of the methods are generally designed on the RGB image domain. Due to the discrepancy between the two-dimensional image plane and the three-dimensional space, such pre-trained models fail to perceive spatial information and serve as sub-optimal solutions for 3D-related tasks. To bridge this gap, we aim to learn a spatial-aware visual representation that can describe the three-dimensional space and is more suitable and effective for these tasks. To leverage point clouds, which are much more superior in providing spatial information compared to images, we propose a simple yet effective 2D Image and 3D Point cloud Unsupervised pre-training strategy, called SimIPU. Specifically, we develop a multi-modal contrastive learning framework that consists of an intra-modal spatial perception module to learn a spatial-aware representation from point clouds and an inter-modal feature interaction module to transfer the capability of perceiving spatial information from the point cloud encoder to the image encoder, respectively. Positive pairs for contrastive losses are established by the matching algorithm and the projection matrix. The whole framework is trained in an unsupervised end-to-end fashion. To the best of our knowledge, this is the first study to explore contrastive learning pre-training strategies for outdoor multi-modal datasets, containing paired camera images and LIDAR point clouds.
+
+    <div align=center><img src="./assets/training/SimIPU.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2112.04680-b31b1b.svg)](https://arxiv.org/abs/2112.04680) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/zhyever/SimIPU)
 
 - **Self-Supervised Pretraining of 3D Features on any Point-Cloud**.
     <details span>
@@ -612,6 +638,16 @@
 👆 [Back to Top](#Table-of-Content)
 
 ### World Model
+- **Visual Point Cloud Forecasting enables Scalable Autonomous Driving**.
+    <details span>
+    <summary>Abstract</summary>
+    In contrast to extensive studies on general vision, pre-training for scalable visual autonomous driving remains seldom explored. Visual autonomous driving applications require features encompassing semantics, 3D geometry, and temporal information simultaneously for joint perception, prediction, and planning, posing dramatic challenges for pre-training. To resolve this, we bring up a new pre-training task termed as visual point cloud forecasting - predicting future point clouds from historical visual input. The key merit of this task captures the synergic learning of semantics, 3D structures, and temporal dynamics. Hence it shows superiority in various downstream tasks. To cope with this new problem, we present ViDAR, a general model to pre-train downstream visual encoders. It first extracts historical embeddings by the encoder. These representations are then transformed to 3D geometric space via a novel Latent Rendering operator for future point cloud prediction. Experiments show significant gain in downstream tasks, e.g., 3.1% NDS on 3D detection, ~10% error reduction on motion forecasting, and ~15% less collision rate on planning.
+
+    <div align=center><img src="./assets/training/ViDAR.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2312.17655-b31b1b.svg)](https://arxiv.org/abs/2312.17655) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/OpenDriveLab/ViDAR)
+
 - **OccWorld: Learning a 3D Occupancy World Model for Autonomous Driving**.
     <details span>
     <summary>Abstract</summary>
@@ -685,8 +721,40 @@
 
 👆 [Back to Top](#Table-of-Content)
 
-## Adapatation
-### SAM
+## Adaptation
+### Vision Foundation Models
+
+- **RadOcc: Learning Cross-Modality Occupancy Knowledge through Rendering Assisted Distillation**.
+    <details span>
+    <summary>Abstract</summary>
+    3D occupancy prediction is an emerging task that aims to estimate the occupancy states and semantics of 3D scenes using multi-view images. However, image-based scene perception encounters significant challenges in achieving accurate prediction due to the absence of geometric priors. In this paper, we address this issue by exploring cross-modal knowledge distillation in this task, i.e., we leverage a stronger multi-modal model to guide the visual model during training. In practice, we observe that directly applying features or logits alignment, proposed and widely used in bird's-eyeview (BEV) perception, does not yield satisfactory results. To overcome this problem, we introduce RadOcc, a Rendering assisted distillation paradigm for 3D Occupancy prediction. By employing differentiable volume rendering, we generate depth and semantic maps in perspective views and propose two novel consistency criteria between the rendered outputs of teacher and student models. Specifically, the depth consistency loss aligns the termination distributions of the rendered rays, while the semantic consistency loss mimics the intra-segment similarity guided by vision foundation models (VLMs). Experimental results on the nuScenes dataset demonstrate the effectiveness of our proposed method in improving various 3D occupancy prediction approaches, e.g., our proposed methodology enhances our baseline by 2.2% in the metric of mIoU and achieves 50% in Occ3D benchmark.
+
+    <div align=center><img src="./assets/adaptation/RadOcc.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2312.11829-b31b1b.svg)](https://arxiv.org/abs/2312.11829)
+
+- **Learning to Adapt SAM for Segmenting Cross-domain Point Clouds**.
+    <details span>
+    <summary>Abstract</summary>
+    Unsupervised domain adaptation (UDA) in 3D segmentation tasks presents a formidable challenge, primarily stemming from the sparse and unordered nature of point cloud data. Especially for LiDAR point clouds, the domain discrepancy becomes obvious across varying capture scenes, fluctuating weather conditions, and the diverse array of LiDAR devices in use. While previous UDA methodologies have often sought to mitigate this gap by aligning features between source and target domains, this approach falls short when applied to 3D segmentation due to the substantial domain variations. Inspired by the remarkable generalization capabilities exhibited by the vision foundation model, SAM, in the realm of image segmentation, our approach leverages the wealth of general knowledge embedded within SAM to unify feature representations across diverse 3D domains and further solves the 3D domain adaptation problem. Specifically, we harness the corresponding images associated with point clouds to facilitate knowledge transfer and propose an innovative hybrid feature augmentation methodology, which significantly enhances the alignment between the 3D feature space and SAM's feature space, operating at both the scene and instance levels. Our method is evaluated on many widely-recognized datasets and achieves state-of-the-art performance.
+
+    <div align=center><img src="./assets/adaptation/SAM-UDA.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2310.08820-b31b1b.svg)](https://arxiv.org/abs/2310.08820)
+
+
+- **Few-Shot Panoptic Segmentation With Foundation Models**.
+    <details span>
+    <summary>Abstract</summary>
+    Current state-of-the-art methods for panoptic segmentation require an immense amount of annotated training data that is both arduous and expensive to obtain posing a significant challenge for their widespread adoption. Concurrently, recent breakthroughs in visual representation learning have sparked a paradigm shift leading to the advent of large foundation models that can be trained with completely unlabeled images. In this work, we propose to leverage such task-agnostic image features to enable few-shot panoptic segmentation by presenting Segmenting Panoptic Information with Nearly 0 labels (SPINO). In detail, our method combines a DINOv2 backbone with lightweight network heads for semantic segmentation and boundary estimation. We show that our approach, albeit being trained with only ten annotated images, predicts high-quality pseudo-labels that can be used with any existing panoptic segmentation method. Notably, we demonstrate that SPINO achieves competitive results compared to fully supervised baselines while using less than 0.3% of the ground truth labels, paving the way for learning complex visual recognition tasks leveraging foundation models. To illustrate its general applicability, we further deploy SPINO on real-world robotic vision systems for both outdoor and indoor environments.
+
+    <div align=center><img src="./assets/adaptation/SPINO.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2309.10726-b31b1b.svg)](https://arxiv.org/abs/2309.10726) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](http://spino.cs.uni-freiburg.de/) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/robot-learning-freiburg/SPINO)
+
 - **Segment Any Point Cloud Sequences by Distilling Vision Foundation Models**.
     <details span>
     <summary>Abstract</summary>
@@ -697,6 +765,16 @@
 
     [![arXiv](https://img.shields.io/badge/arXiv-2306.09347-b31b1b.svg)](https://arxiv.org/abs/2306.09347) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://ldkong.com/Seal) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/youquanl/Segment-Any-Point-Cloud)
 
+
+- **Calib-Anything: Zero-training LiDAR-Camera Extrinsic Calibration Method Using Segment Anything**.
+    <details span>
+    <summary>Abstract</summary>
+    The research on extrinsic calibration between Light Detection and Ranging(LiDAR) and camera are being promoted to a more accurate, automatic and generic manner. Since deep learning has been employed in calibration, the restrictions on the scene are greatly reduced. However, data driven method has the drawback of low transfer-ability. It cannot adapt to dataset variations unless additional training is taken. With the advent of foundation model, this problem can be significantly mitigated. By using the Segment Anything Model(SAM), we propose a novel LiDAR-camera calibration method, which requires zero extra training and adapts to common scenes. With an initial guess, we opimize the extrinsic parameter by maximizing the consistency of points that are projected inside each image mask. The consistency includes three properties of the point cloud: the intensity, normal vector and categories derived from some segmentation methods. The experiments on different dataset have demonstrated the generality and comparable accuracy of our method. 
+
+    <div align=center><img src="./assets/adaptation/Calib-Anything.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2306.02656-b31b1b.svg)](https://arxiv.org/abs/2306.02656) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/OpenCalib/CalibAnything)
 
 - **Robustness of Segment Anything Model (SAM) for Autonomous Driving in Adverse Weather Conditions**.
     <details span>
@@ -710,7 +788,73 @@
 
 👆 [Back to Top](#Table-of-Content)
 
-### CLIP
+### Large Language Models
+- **GPT-Driver: Learning to Drive with GPT**.
+    <details span>
+    <summary>Abstract</summary>
+    We present a simple yet effective approach that can transform the OpenAI GPT-3.5 model into a reliable motion planner for autonomous vehicles. Motion planning is a core challenge in autonomous driving, aiming to plan a driving trajectory that is safe and comfortable. Existing motion planners predominantly leverage heuristic methods to forecast driving trajectories, yet these approaches demonstrate insufficient generalization capabilities in the face of novel and unseen driving scenarios. In this paper, we propose a novel approach to motion planning that capitalizes on the strong reasoning capabilities and generalization potential inherent to Large Language Models (LLMs). The fundamental insight of our approach is the reformulation of motion planning as a language modeling problem, a perspective not previously explored. Specifically, we represent the planner inputs and outputs as language tokens, and leverage the LLM to generate driving trajectories through a language description of coordinate positions. Furthermore, we propose a novel prompting-reasoning-finetuning strategy to stimulate the numerical reasoning potential of the LLM. With this strategy, the LLM can describe highly precise trajectory coordinates and also its internal decision-making process in natural language. We evaluate our approach on the large-scale nuScenes dataset, and extensive experiments substantiate the effectiveness, generalization ability, and interpretability of our GPT-based motion planner.
+
+    <div align=center><img src="./assets/adaptation/GPT-Driver.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2310.01415-b31b1b.svg)](https://arxiv.org/abs/2310.01415) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://pointscoder.github.io/projects/gpt_driver/index.html) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/PointsCoder/GPT-Driver)
+
+- **LanguageMPC: Large Language Models as Decision Makers for Autonomous Driving**.
+    <details span>
+    <summary>Abstract</summary>
+    Existing learning-based autonomous driving (AD) systems face challenges in comprehending high-level information, generalizing to rare events, and providing interpretability. To address these problems, this work employs Large Language Models (LLMs) as a decision-making component for complex AD scenarios that require human commonsense understanding. We devise cognitive pathways to enable comprehensive reasoning with LLMs, and develop algorithms for translating LLM decisions into actionable driving commands. Through this approach, LLM decisions are seamlessly integrated with low-level controllers by guided parameter matrix adaptation. Extensive experiments demonstrate that our proposed method not only consistently surpasses baseline approaches in single-vehicle tasks, but also helps handle complex driving behaviors even multi-vehicle coordination, thanks to the commonsense reasoning capabilities of LLMs. This paper presents an initial step toward leveraging LLMs as effective decision-makers for intricate AD scenarios in terms of safety, efficiency, generalizability, and interoperability. We aspire for it to serve as inspiration for future research in this field.
+
+    <div align=center><img src="./assets/adaptation/LanguageMPC.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2310.03026-b31b1b.svg)](https://arxiv.org/abs/2310.03026) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://sites.google.com/view/llm-mpc)
+
+- **HiLM-D: Towards High-Resolution Understanding in Multimodal Large Language Models for Autonomous Driving**.
+    <details span>
+    <summary>Abstract</summary>
+    Autonomous driving systems generally employ separate models for different tasks resulting in intricate designs. For the first time, we leverage singular multimodal large language models (MLLMs) to consolidate multiple autonomous driving tasks from videos, i.e., the Risk Object Localization and Intention and Suggestion Prediction (ROLISP) task. ROLISP uses natural language to simultaneously identify and interpret risk objects, understand ego-vehicle intentions, and provide motion suggestions, eliminating the necessity for task-specific architectures. However, lacking high-resolution (HR) information, existing MLLMs often miss small objects (e.g., traffic cones) and overly focus on salient ones (e.g., large trucks) when applied to ROLISP. We propose HiLM-D (Towards High-Resolution Understanding in MLLMs for Autonomous Driving), an efficient method to incorporate HR information into MLLMs for the ROLISP task. Especially, HiLM-D integrates two branches: (i) the low-resolution reasoning branch, can be any MLLMs, processes low-resolution videos to caption risk objects and discern ego-vehicle intentions/suggestions; (ii) the high-resolution perception branch (HR-PB), prominent to HiLM-D,, ingests HR images to enhance detection by capturing vision-specific HR feature maps and prioritizing all potential risks over merely salient objects. Our HR-PB serves as a plug-and-play module, seamlessly fitting into current MLLMs. Experiments on the ROLISP benchmark reveal HiLM-D's notable advantage over leading MLLMs, with improvements of 4.8% in BLEU-4 for captioning and 17.2% in mIoU for detection.
+
+    <div align=center><img src="./assets/adaptation/HiLM-D.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2309.05186-b31b1b.svg)](https://arxiv.org/abs/2309.05186)
+
+- **Language Prompt for Autonomous Driving**.
+    <details span>
+    <summary>Abstract</summary>
+    A new trend in the computer vision community is to capture objects of interest following flexible human command represented by a natural language prompt. However, the progress of using language prompts in driving scenarios is stuck in a bottleneck due to the scarcity of paired prompt-instance data. To address this challenge, we propose the first object-centric language prompt set for driving scenes within 3D, multi-view, and multi-frame space, named NuPrompt. It expands Nuscenes dataset by constructing a total of 35,367 language descriptions, each referring to an average of 5.3 object tracks. Based on the object-text pairs from the new benchmark, we formulate a new prompt-based driving task, \ie, employing a language prompt to predict the described object trajectory across views and frames. Furthermore, we provide a simple end-to-end baseline model based on Transformer, named PromptTrack. Experiments show that our PromptTrack achieves impressive performance on NuPrompt. We hope this work can provide more new insights for the autonomous driving community.
+
+    <div align=center><img src="./assets/adaptation/Prompt4Driving.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2309.04379-b31b1b.svg)](https://arxiv.org/abs/2309.04379) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/wudongming97/Prompt4Driving)
+
+- **Drive Like a Human: Rethinking Autonomous Driving with Large Language Models**.
+    <details span>
+    <summary>Abstract</summary>
+    In this paper, we explore the potential of using a large language model (LLM) to understand the driving environment in a human-like manner and analyze its ability to reason, interpret, and memorize when facing complex scenarios. We argue that traditional optimization-based and modular autonomous driving (AD) systems face inherent performance limitations when dealing with long-tail corner cases. To address this problem, we propose that an ideal AD system should drive like a human, accumulating experience through continuous driving and using common sense to solve problems. To achieve this goal, we identify three key abilities necessary for an AD system: reasoning, interpretation, and memorization. We demonstrate the feasibility of employing an LLM in driving scenarios by building a closed-loop system to showcase its comprehension and environment-interaction abilities. Our extensive experiments show that the LLM exhibits the impressive ability to reason and solve long-tailed cases, providing valuable insights for the development of human-like autonomous driving. 
+
+    <div align=center><img src="./assets/adaptation/Drive-like-human.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2307.07162-b31b1b.svg)](https://arxiv.org/abs/2307.07162) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/PJLab-ADG/DriveLikeAHuman)
+
+
+👆 [Back to Top](#Table-of-Content)
+
+### Multimodal Foundation Models
+
+- **DriveLM: Driving with Graph Visual Question Answering**.
+    <details span>
+    <summary>Abstract</summary>
+    We study how vision-language models (VLMs) trained on web-scale data can be integrated into end-to-end driving systems to boost generalization and enable interactivity with human users. While recent approaches adapt VLMs to driving via single-round visual question answering (VQA), human drivers reason about decisions in multiple steps. Starting from the localization of key objects, humans estimate object interactions before taking actions. The key insight is that with our proposed task, Graph VQA, where we model graph-structured reasoning through perception, prediction and planning question-answer pairs, we obtain a suitable proxy task to mimic the human reasoning process. We instantiate datasets (DriveLM-Data) built upon nuScenes and CARLA, and propose a VLM-based baseline approach (DriveLM-Agent) for jointly performing Graph VQA and end-to-end driving. The experiments demonstrate that Graph VQA provides a simple, principled framework for reasoning about a driving scene, and DriveLM-Data provides a challenging benchmark for this task. Our DriveLM-Agent baseline performs end-to-end autonomous driving competitively in comparison to state-of-the-art driving-specific architectures. Notably, its benefits are pronounced when it is evaluated zero-shot on unseen objects or sensor configurations. We hope this work can be the starting point to shed new light on how to apply VLMs for autonomous driving.
+
+    <div align=center><img src="./assets/adaptation/DriveLM.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2312.14150-b31b1b.svg)](https://arxiv.org/abs/2312.14150) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/OpenDriveLab/DriveLM)
+
+
 - **Convolutions Die Hard: Open-Vocabulary Segmentation with Single Frozen Convolutional CLIP**.
     <details span>
     <summary>Abstract</summary>
@@ -768,38 +912,5 @@
     </details>
 
     [![arXiv](https://img.shields.io/badge/arXiv-2201.03546-b31b1b.svg)](https://arxiv.org/abs/2201.03546) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/isl-org/lang-seg)
-
-👆 [Back to Top](#Table-of-Content)
-
-### LLMs-VLMs
-- **GPT-Driver: Learning to Drive with GPT**.
-    <details span>
-    <summary>Abstract</summary>
-    We present a simple yet effective approach that can transform the OpenAI GPT-3.5 model into a reliable motion planner for autonomous vehicles. Motion planning is a core challenge in autonomous driving, aiming to plan a driving trajectory that is safe and comfortable. Existing motion planners predominantly leverage heuristic methods to forecast driving trajectories, yet these approaches demonstrate insufficient generalization capabilities in the face of novel and unseen driving scenarios. In this paper, we propose a novel approach to motion planning that capitalizes on the strong reasoning capabilities and generalization potential inherent to Large Language Models (LLMs). The fundamental insight of our approach is the reformulation of motion planning as a language modeling problem, a perspective not previously explored. Specifically, we represent the planner inputs and outputs as language tokens, and leverage the LLM to generate driving trajectories through a language description of coordinate positions. Furthermore, we propose a novel prompting-reasoning-finetuning strategy to stimulate the numerical reasoning potential of the LLM. With this strategy, the LLM can describe highly precise trajectory coordinates and also its internal decision-making process in natural language. We evaluate our approach on the large-scale nuScenes dataset, and extensive experiments substantiate the effectiveness, generalization ability, and interpretability of our GPT-based motion planner.
-
-    <div align=center><img src="./assets/adaptation/GPT-Driver.png" width="100%" /></div>
-    </details>
-
-    [![arXiv](https://img.shields.io/badge/arXiv-2310.01415-b31b1b.svg)](https://arxiv.org/abs/2310.01415) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://pointscoder.github.io/projects/gpt_driver/index.html) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/PointsCoder/GPT-Driver)
-
-- **LanguageMPC: Large Language Models as Decision Makers for Autonomous Driving**.
-    <details span>
-    <summary>Abstract</summary>
-    Existing learning-based autonomous driving (AD) systems face challenges in comprehending high-level information, generalizing to rare events, and providing interpretability. To address these problems, this work employs Large Language Models (LLMs) as a decision-making component for complex AD scenarios that require human commonsense understanding. We devise cognitive pathways to enable comprehensive reasoning with LLMs, and develop algorithms for translating LLM decisions into actionable driving commands. Through this approach, LLM decisions are seamlessly integrated with low-level controllers by guided parameter matrix adaptation. Extensive experiments demonstrate that our proposed method not only consistently surpasses baseline approaches in single-vehicle tasks, but also helps handle complex driving behaviors even multi-vehicle coordination, thanks to the commonsense reasoning capabilities of LLMs. This paper presents an initial step toward leveraging LLMs as effective decision-makers for intricate AD scenarios in terms of safety, efficiency, generalizability, and interoperability. We aspire for it to serve as inspiration for future research in this field.
-
-    <div align=center><img src="./assets/adaptation/LanguageMPC.png" width="100%" /></div>
-    </details>
-
-    [![arXiv](https://img.shields.io/badge/arXiv-TODO-b31b1b.svg)](https://arxiv.org/abs/2310.03026) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://sites.google.com/view/llm-mpc)
-
-- **Drive Like a Human: Rethinking Autonomous Driving with Large Language Models**.
-    <details span>
-    <summary>Abstract</summary>
-    In this paper, we explore the potential of using a large language model (LLM) to understand the driving environment in a human-like manner and analyze its ability to reason, interpret, and memorize when facing complex scenarios. We argue that traditional optimization-based and modular autonomous driving (AD) systems face inherent performance limitations when dealing with long-tail corner cases. To address this problem, we propose that an ideal AD system should drive like a human, accumulating experience through continuous driving and using common sense to solve problems. To achieve this goal, we identify three key abilities necessary for an AD system: reasoning, interpretation, and memorization. We demonstrate the feasibility of employing an LLM in driving scenarios by building a closed-loop system to showcase its comprehension and environment-interaction abilities. Our extensive experiments show that the LLM exhibits the impressive ability to reason and solve long-tailed cases, providing valuable insights for the development of human-like autonomous driving. 
-
-    <div align=center><img src="./assets/adaptation/Drive-like-human.png" width="100%" /></div>
-    </details>
-
-    [![arXiv](https://img.shields.io/badge/arXiv-2307.07162-b31b1b.svg)](https://arxiv.org/abs/2307.07162) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/PJLab-ADG/DriveLikeAHuman)
 
 👆 [Back to Top](#Table-of-Content)
