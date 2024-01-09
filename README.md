@@ -2,11 +2,11 @@
 
 **NOTE**: Here we have select a number of featured papers for each part, and almost for each paper we have included the abstract and a figure from the original paper, showing the main framework or motivations, to help us take a glance about these papers (You can expand the **Abstract** button to see them). More papers list and details can be found in our survey paper (Please stay tuned! 👀).
 
-**We greatly appreciate any contributions via PRs, issues, emails, or other methods.**
-
 ⭐ Welcome to star this repository! ⭐
 
 ![](./assets/teaser.png "Forging Vision Foundation Models for Autonomous Driving: Challenges, Methodologies, and Opportunities")
+
+**We greatly appreciate any contributions via PRs, issues, emails, or other methods.**
 
 ## Citation
 If this work is helpful for your research, please consider citing the following BibTeX entry.
