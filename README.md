@@ -1,12 +1,14 @@
 # Forging Vision Foundation Models for Autonomous Driving: Challenges, Methodologies, and Opportunities
 
-**NOTE**: Here we have select a number of featured papers for each part, and almost for each paper we have included the abstract and a figure from the original paper, showing the main framework or motivations, to help us take a glance about these papers (You can expand the **Abstract** button to see them). More papers list and details can be found in our survey paper (Please stay tuned! 👀).
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) [![GitHub license](https://img.shields.io/github/license/Thinklab-SJTU/Awesome-LLM4AD)](https://github.com/Thinklab-SJTU/Awesome-LLM4AD/blob/main/LICENSE)
 
-⭐ Welcome to star this repository! ⭐
+This repository is largely based on our survey paper:
 
-![](./assets/teaser.png "Forging Vision Foundation Models for Autonomous Driving: Challenges, Methodologies, and Opportunities")
+[Paper]()
 
-**We greatly appreciate any contributions via PRs, issues, emails, or other methods.**
+[Xu Yan](https://yanx27.github.io/), [Haiming Zhang](https://scholar.google.com/citations?user=RPWMpyIAAAAJ&hl=zh-CN), Yingjie Cai, Jingming Guo, Weichao Qiu, Bin
+Gao, Kaiqiang Zhou, Yue Zhao, Huan Jin, Jiantao Gao, [Zhen Li](https://mypage.cuhk.edu.cn/academics/lizhen/), Lihui
+Jiang, Wei Zhang, Hongbo Zhang, Dengxin Dai and Bingbing Liu
 
 ## Citation
 If this work is helpful for your research, please consider citing the following BibTeX entry.
@@ -14,7 +16,22 @@ If this work is helpful for your research, please consider citing the following 
 TBD
 ```
 
-## News 📰
+## Overview
+![](./assets/teaser.png "Forging Vision Foundation Models for Autonomous Driving: Challenges, Methodologies, and Opportunities")
+
+This is the partner repository for the survey paper "Forging Vision Foundation Models for Autonomous Driving: Challenges, Methodologies, and Opportunities". The authors hope this repository can act as a quick reference for researchers who wish to read the relevant papers and implement the associated methods.
+
+
+**NOTE**: Here we have select a number of featured papers for each part, and almost for each paper we have included the abstract and a figure from the original paper, showing the main framework or motivations, to help us take a glance about these papers (You can expand the **Abstract** button to see them). **More papers list and details can be found in our survey paper**.
+
+
+⭐ **Welcome to star this repository!** ⭐
+
+We greatly appreciate any contributions via PRs, issues, emails, or other methods.
+
+
+##  📰 News
+- `[2024/01/15]` Release this repository and open-access our survey paper in arXiv.
 - `[2023/12/19]` Initial commit.
 
 ## Table of Content
