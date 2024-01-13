@@ -19,6 +19,8 @@ TBD
 ## Overview
 ![](./assets/teaser.png "Forging Vision Foundation Models for Autonomous Driving: Challenges, Methodologies, and Opportunities")
 
+![](./assets/Research_Tree.png "Forging Vision Foundation Models for Autonomous Driving: Challenges, Methodologies, and Opportunities")
+
 This is the partner repository for the survey paper "Forging Vision Foundation Models for Autonomous Driving: Challenges, Methodologies, and Opportunities". The authors hope this repository can act as a quick reference for researchers who wish to read the relevant papers and implement the associated methods.
 
 
@@ -53,26 +55,6 @@ We greatly appreciate any contributions via PRs, issues, emails, or other method
   - [Multimodal Foundation Models](#multimodal-foundation-models)
 
 ## Related Survey Papers
-- **Foundation Models for Decision Making: Problems, Methods, and Opportunities**.
-    <details span>
-    <summary>Abstract</summary>
-    Foundation models pretrained on diverse data at scale have demonstrated extraordinary capabilities in a wide range of vision and language tasks. When such models are deployed in real world environments, they inevitably interface with other entities and agents. For example, language models are often used to interact with human beings through dialogue, and visual perception models are used to autonomously navigate neighborhood streets. In response to these developments, new paradigms are emerging for training foundation models to interact with other agents and perform long-term reasoning. These paradigms leverage the existence of ever-larger datasets curated for multimodal, multitask, and generalist interaction. Research at the intersection of foundation models and decision making holds tremendous promise for creating powerful new systems that can interact effectively across a diverse range of applications such as dialogue, autonomous driving, healthcare, education, and robotics. In this manuscript, we examine the scope of foundation models for decision making, and provide conceptual tools and technical background for understanding the problem space and exploring new research directions. We review recent approaches that ground foundation models in practical decision making applications through a variety of methods such as prompting, conditional generative modeling, planning, optimal control, and reinforcement learning, and discuss common challenges and open problems in the field.
-
-    <div align=center><img src="./assets/FM.png" width="100%" /></div>
-    </details>
-
-    [![arXiv](https://img.shields.io/badge/arXiv-2303.04129-b31b1b.svg)](https://arxiv.org/abs/2303.04129)
-
-- **On the Opportunities and Risks of Foundation Models**.
-    <details span>
-    <summary>Abstract</summary>
-    AI is undergoing a paradigm shift with the rise of models (e.g., BERT, DALL-E, GPT-3) that are trained on broad data at scale and are adaptable to a wide range of downstream tasks. We call these models foundation models to underscore their critically central yet incomplete character. This report provides a thorough account of the opportunities and risks of foundation models, ranging from their capabilities (e.g., language, vision, robotics, reasoning, human interaction) and technical principles(e.g., model architectures, training procedures, data, systems, security, evaluation, theory) to their applications (e.g., law, healthcare, education) and societal impact (e.g., inequity, misuse, economic and environmental impact, legal and ethical considerations). Though foundation models are based on standard deep learning and transfer learning, their scale results in new emergent capabilities,and their effectiveness across so many tasks incentivizes homogenization. Homogenization provides powerful leverage but demands caution, as the defects of the foundation model are inherited by all the adapted models downstream. Despite the impending widespread deployment of foundation models, we currently lack a clear understanding of how they work, when they fail, and what they are even capable of due to their emergent properties. To tackle these questions, we believe much of the critical research on foundation models will require deep interdisciplinary collaboration commensurate with their fundamentally sociotechnical nature.
-
-    <div align=center><img src="./assets/FM_Survey.png" width="100%" /></div>
-    </details>
-
-    [![arXiv](https://img.shields.io/badge/arXiv-2108.07258-b31b1b.svg)](https://arxiv.org/abs/2108.07258) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://crfm.stanford.edu/report.html)
-
 - **Foundation Models in Robotics: Applications, Challenges, and the Future**.
     <details span>
     <summary>Abstract</summary>
@@ -80,17 +62,6 @@ We greatly appreciate any contributions via PRs, issues, emails, or other method
     </details>
 
     [![arXiv](https://img.shields.io/badge/arXiv-2312.07843-b31b1b.svg)](https://arxiv.org/abs/2312.07843) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/robotics-survey/Awesome-Robotics-Foundation-Models)
-
-
-- **A Survey of Large Language Models for Autonomous Driving**.
-    <details span>
-    <summary>Abstract</summary>
-    Autonomous driving technology, a catalyst for revolutionizing transportation and urban mobility, has the tend to transition from rule-based systems to data-driven strategies. Traditional module-based systems are constrained by cumulative errors among cascaded modules and inflexible pre-set rules. In contrast, end-to-end autonomous driving systems have the potential to avoid error accumulation due to their fully data-driven training process, although they often lack transparency due to their ``black box" nature, complicating the validation and traceability of decisions. Recently, large language models (LLMs) have demonstrated abilities including understanding context, logical reasoning, and generating answers. A natural thought is to utilize these abilities to empower autonomous driving. By combining LLM with foundation vision models, it could open the door to open-world understanding, reasoning, and few-shot learning, which current autonomous driving systems are lacking. In this paper, we systematically review a research line about \textit{Large Language Models for Autonomous Driving (LLM4AD)}. This study evaluates the current state of technological advancements, distinctly outlining the principal challenges and prospective directions for the field.
-
-    <div align=center><img src="./assets/LLM4AD.png" width="100%" /></div>
-    </details>
-
-    [![arXiv](https://img.shields.io/badge/arXiv-2304.10406-b31b1b.svg)](https://arxiv.org/abs/2304.10406) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/Thinklab-SJTU/Awesome-LLM4AD)
 
 - **Applications of Large Scale Foundation Models for Autonomous Driving**.
     <details span>
@@ -117,7 +88,37 @@ We greatly appreciate any contributions via PRs, issues, emails, or other method
     </details>
 
     [![arXiv](https://img.shields.io/badge/arXiv-2305.08196-b31b1b.svg)](https://arxiv.org/abs/2305.08196) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/liliu-avril/Awesome-Segment-Anything)
+    
+- **Foundation Models for Decision Making: Problems, Methods, and Opportunities**.
+    <details span>
+    <summary>Abstract</summary>
+    Foundation models pretrained on diverse data at scale have demonstrated extraordinary capabilities in a wide range of vision and language tasks. When such models are deployed in real world environments, they inevitably interface with other entities and agents. For example, language models are often used to interact with human beings through dialogue, and visual perception models are used to autonomously navigate neighborhood streets. In response to these developments, new paradigms are emerging for training foundation models to interact with other agents and perform long-term reasoning. These paradigms leverage the existence of ever-larger datasets curated for multimodal, multitask, and generalist interaction. Research at the intersection of foundation models and decision making holds tremendous promise for creating powerful new systems that can interact effectively across a diverse range of applications such as dialogue, autonomous driving, healthcare, education, and robotics. In this manuscript, we examine the scope of foundation models for decision making, and provide conceptual tools and technical background for understanding the problem space and exploring new research directions. We review recent approaches that ground foundation models in practical decision making applications through a variety of methods such as prompting, conditional generative modeling, planning, optimal control, and reinforcement learning, and discuss common challenges and open problems in the field.
 
+    <div align=center><img src="./assets/FM.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2303.04129-b31b1b.svg)](https://arxiv.org/abs/2303.04129)
+
+
+- **A Survey of Large Language Models for Autonomous Driving**.
+    <details span>
+    <summary>Abstract</summary>
+    Autonomous driving technology, a catalyst for revolutionizing transportation and urban mobility, has the tend to transition from rule-based systems to data-driven strategies. Traditional module-based systems are constrained by cumulative errors among cascaded modules and inflexible pre-set rules. In contrast, end-to-end autonomous driving systems have the potential to avoid error accumulation due to their fully data-driven training process, although they often lack transparency due to their ``black box" nature, complicating the validation and traceability of decisions. Recently, large language models (LLMs) have demonstrated abilities including understanding context, logical reasoning, and generating answers. A natural thought is to utilize these abilities to empower autonomous driving. By combining LLM with foundation vision models, it could open the door to open-world understanding, reasoning, and few-shot learning, which current autonomous driving systems are lacking. In this paper, we systematically review a research line about \textit{Large Language Models for Autonomous Driving (LLM4AD)}. This study evaluates the current state of technological advancements, distinctly outlining the principal challenges and prospective directions for the field.
+
+    <div align=center><img src="./assets/LLM4AD.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2304.10406-b31b1b.svg)](https://arxiv.org/abs/2304.10406) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/Thinklab-SJTU/Awesome-LLM4AD)
+
+- **On the Opportunities and Risks of Foundation Models**.
+    <details span>
+    <summary>Abstract</summary>
+    AI is undergoing a paradigm shift with the rise of models (e.g., BERT, DALL-E, GPT-3) that are trained on broad data at scale and are adaptable to a wide range of downstream tasks. We call these models foundation models to underscore their critically central yet incomplete character. This report provides a thorough account of the opportunities and risks of foundation models, ranging from their capabilities (e.g., language, vision, robotics, reasoning, human interaction) and technical principles(e.g., model architectures, training procedures, data, systems, security, evaluation, theory) to their applications (e.g., law, healthcare, education) and societal impact (e.g., inequity, misuse, economic and environmental impact, legal and ethical considerations). Though foundation models are based on standard deep learning and transfer learning, their scale results in new emergent capabilities,and their effectiveness across so many tasks incentivizes homogenization. Homogenization provides powerful leverage but demands caution, as the defects of the foundation model are inherited by all the adapted models downstream. Despite the impending widespread deployment of foundation models, we currently lack a clear understanding of how they work, when they fail, and what they are even capable of due to their emergent properties. To tackle these questions, we believe much of the critical research on foundation models will require deep interdisciplinary collaboration commensurate with their fundamentally sociotechnical nature.
+
+    <div align=center><img src="./assets/FM_Survey.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2108.07258-b31b1b.svg)](https://arxiv.org/abs/2108.07258) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://crfm.stanford.edu/report.html)
 
 👆 [Back to Top](#Table-of-Content)
 
@@ -955,3 +956,12 @@ A survey paper of contrastive-based self-supervised learning: [A survey on contr
     [![arXiv](https://img.shields.io/badge/arXiv-2201.03546-b31b1b.svg)](https://arxiv.org/abs/2201.03546) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/isl-org/lang-seg)
 
 👆 [Back to Top](#Table-of-Content)
+
+
+
+**Citation**
+
+If this work is helpful for your research, please consider citing the following BibTeX entry.
+``` bibtex
+TBD
+```
