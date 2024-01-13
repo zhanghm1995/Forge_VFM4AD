@@ -4,7 +4,7 @@
 
 This repository is largely based on our survey paper:
 
-[Paper]()
+[![arXiv](https://img.shields.io/badge/arXiv-TODO-b31b1b.svg)](https://arxiv.org/abs/TODO)
 
 [Xu Yan](https://yanx27.github.io/), [Haiming Zhang](https://scholar.google.com/citations?user=RPWMpyIAAAAJ&hl=zh-CN), Yingjie Cai, Jingming Guo, Weichao Qiu, Bin
 Gao, Kaiqiang Zhou, Yue Zhao, Huan Jin, Jiantao Gao, [Zhen Li](https://mypage.cuhk.edu.cn/academics/lizhen/), Lihui
@@ -366,6 +366,8 @@ We greatly appreciate any contributions via PRs, issues, emails, or other method
 
 ## Self-supervised Training
 ### Contrastive
+A survey paper of contrastive-based self-supervised learning: [A survey on contrastive self-supervised learning](https://arxiv.org/abs/2011.00362).
+
 - **BEVContrast: Self-Supervision in BEV Space for Automotive Lidar Point Clouds**.
     <details span>
     <summary>Abstract</summary>
@@ -843,7 +845,7 @@ We greatly appreciate any contributions via PRs, issues, emails, or other method
     <summary>Abstract</summary>
     A new trend in the computer vision community is to capture objects of interest following flexible human command represented by a natural language prompt. However, the progress of using language prompts in driving scenarios is stuck in a bottleneck due to the scarcity of paired prompt-instance data. To address this challenge, we propose the first object-centric language prompt set for driving scenes within 3D, multi-view, and multi-frame space, named NuPrompt. It expands Nuscenes dataset by constructing a total of 35,367 language descriptions, each referring to an average of 5.3 object tracks. Based on the object-text pairs from the new benchmark, we formulate a new prompt-based driving task, \ie, employing a language prompt to predict the described object trajectory across views and frames. Furthermore, we provide a simple end-to-end baseline model based on Transformer, named PromptTrack. Experiments show that our PromptTrack achieves impressive performance on NuPrompt. We hope this work can provide more new insights for the autonomous driving community.
 
-    <div align=center><img src="./assets/adaptation/Prompt4Driving.png" width="100%" /></div>
+    <div align=center><img src="./assets/adaptation/PromptTrack.png" width="100%" /></div>
     </details>
 
     [![arXiv](https://img.shields.io/badge/arXiv-2309.04379-b31b1b.svg)](https://arxiv.org/abs/2309.04379) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/wudongming97/Prompt4Driving)
@@ -873,6 +875,26 @@ We greatly appreciate any contributions via PRs, issues, emails, or other method
 
     [![arXiv](https://img.shields.io/badge/arXiv-2312.14150-b31b1b.svg)](https://arxiv.org/abs/2312.14150) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/OpenDriveLab/DriveLM)
 
+
+- **Dolphins: Multimodal Language Model for Driving**.
+    <details span>
+    <summary>Abstract</summary>
+    The quest for fully autonomous vehicles (AVs) capable of navigating complex real-world scenarios with human-like understanding and responsiveness. In this paper, we introduce Dolphins, a novel vision-language model architected to imbibe human-like abilities as a conversational driving assistant. Dolphins is adept at processing multimodal inputs comprising video (or image) data, text instructions, and historical control signals to generate informed outputs corresponding to the provided instructions. Building upon the open-sourced pretrained Vision-Language Model, OpenFlamingo, we first enhance Dolphins's reasoning capabilities through an innovative Grounded Chain of Thought (GCoT) process. Then we tailored Dolphins to the driving domain by constructing driving-specific instruction data and conducting instruction tuning. Through the utilization of the BDD-X dataset, we designed and consolidated four distinct AV tasks into Dolphins to foster a holistic understanding of intricate driving scenarios. As a result, the distinctive features of Dolphins are characterized into two dimensions: (1) the ability to provide a comprehensive understanding of complex and long-tailed open-world driving scenarios and solve a spectrum of AV tasks, and (2) the emergence of human-like capabilities including gradient-free instant adaptation via in-context learning and error recovery via reflection.
+
+    <div align=center><img src="./assets/adaptation/Dolphins.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2312.00438-b31b1b.svg)](https://arxiv.org/abs/2312.00438) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://vlm-driver.github.io/) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/vlm-driver/Dolphins)
+
+- **On the Road with GPT-4V(ision): Early Explorations of Visual-Language Model on Autonomous Driving**.
+    <details span>
+    <summary>Abstract</summary>
+    The pursuit of autonomous driving technology hinges on the sophisticated integration of perception, decision-making, and control systems. Traditional approaches, both data-driven and rule-based, have been hindered by their inability to grasp the nuance of complex driving environments and the intentions of other road users. This has been a significant bottleneck, particularly in the development of common sense reasoning and nuanced scene understanding necessary for safe and reliable autonomous driving. The advent of Visual Language Models (VLM) represents a novel frontier in realizing fully autonomous vehicle driving. This report provides an exhaustive evaluation of the latest state-of-the-art VLM, GPT-4V(ision), and its application in autonomous driving scenarios. We explore the model's abilities to understand and reason about driving scenes, make decisions, and ultimately act in the capacity of a driver. Our comprehensive tests span from basic scene recognition to complex causal reasoning and real-time decision-making under varying conditions. Our findings reveal that GPT-4V demonstrates superior performance in scene understanding and causal reasoning compared to existing autonomous systems. It showcases the potential to handle out-of-distribution scenarios, recognize intentions, and make informed decisions in real driving contexts. However, challenges remain, particularly in direction discernment, traffic light recognition, vision grounding, and spatial reasoning tasks. These limitations underscore the need for further research and development.
+
+    <div align=center><img src="./assets/adaptation/On_Road_GPT4V.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2311.05332-b31b1b.svg)](https://arxiv.org/abs/2311.05332) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/PJLab-ADG/GPT4V-AD-Exploration)
 
 - **Convolutions Die Hard: Open-Vocabulary Segmentation with Single Frozen Convolutional CLIP**.
     <details span>
