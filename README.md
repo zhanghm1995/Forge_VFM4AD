@@ -4,7 +4,7 @@
 
 This is the partner repository for the survey paper [Forging Vision Foundation Models for Autonomous Driving: Challenges, Methodologies, and Opportunities](https://arxiv.org/abs/2401.08045). The repository will be continuously updated to track the progress of forging VFMs for AD. We hope this repository can act as a quick reference for researchers who wish to read the relevant papers and implement the associated methods.
 
-**Authors**: [Xu Yan](https://yanx27.github.io/), [Haiming Zhang](https://scholar.google.com/citations?user=RPWMpyIAAAAJ&hl=zh-CN), Yingjie Cai, Jingming Guo, Weichao Qiu, Bin
+**Authors**: [Xu Yan](https://yanx27.github.io/), [Haiming Zhang](https://scholar.google.com/citations?user=RPWMpyIAAAAJ&hl=zh-CN), [Yingjie Cai](https://yjcaimeow.github.io/), Jingming Guo, Weichao Qiu, Bin
 Gao, Kaiqiang Zhou, Yue Zhao, Huan Jin, Jiantao Gao, [Zhen Li](https://mypage.cuhk.edu.cn/academics/lizhen/), Lihui
 Jiang, Wei Zhang, Hongbo Zhang, [Dengxin Dai](https://vas.mpi-inf.mpg.de/dengxin/) and Bingbing Liu.
 
