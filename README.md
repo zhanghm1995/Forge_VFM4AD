@@ -202,6 +202,16 @@ If this work is helpful for your research, please consider citing the following 
 
 
 ### Diffusion
+- **Panacea: Panoramic and Controllable Video Generation for Autonomous Driving**.
+    <details span>
+    <summary>Abstract</summary>
+    The field of autonomous driving increasingly demands high-quality annotated training data. In this paper, we propose Panacea, an innovative approach to generate panoramic and controllable videos in driving scenarios, capable of yielding an unlimited numbers of diverse, annotated samples pivotal for autonomous driving advancements. Panacea addresses two critical challenges: 'Consistency' and 'Controllability.' Consistency ensures temporal and cross-view coherence, while Controllability ensures the alignment of generated content with corresponding annotations. Our approach integrates a novel 4D attention and a two-stage generation pipeline to maintain coherence, supplemented by the ControlNet framework for meticulous control by the Bird's-Eye-View (BEV) layouts. Extensive qualitative and quantitative evaluations of Panacea on the nuScenes dataset prove its effectiveness in generating high-quality multi-view driving-scene videos. This work notably propels the field of autonomous driving by effectively augmenting the training dataset used for advanced BEV perception techniques.
+
+    <div align=center><img src="./assets/data/Panacea.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2311.16813-b31b1b.svg)](https://arxiv.org/abs/2311.16813) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://panacea-ad.github.io/) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/wenyuqing/panacea)
+
 - **GeoDiffusion: Text-Prompted Geometric Control for Object Detection Data Generation**.
     <details span>
     <summary>Abstract</summary>
@@ -249,6 +259,15 @@ If this work is helpful for your research, please consider citing the following 
 
 ### NeRF
 
+- **EmerNeRF: Emergent Spatial-Temporal Scene Decomposition via Self-Supervision**.
+    <details span>
+    <summary>Abstract</summary>
+    We present EmerNeRF, a simple yet powerful approach for learning spatial-temporal representations of dynamic driving scenes. Grounded in neural fields, EmerNeRF simultaneously captures scene geometry, appearance, motion, and semantics via self-bootstrapping. EmerNeRF hinges upon two core components: First, it stratifies scenes into static and dynamic fields. This decomposition emerges purely from self-supervision, enabling our model to learn from general, in-the-wild data sources. Second, EmerNeRF parameterizes an induced flow field from the dynamic field and uses this flow field to further aggregate multi-frame features, amplifying the rendering precision of dynamic objects. Coupling these three fields (static, dynamic, and flow) enables EmerNeRF to represent highly-dynamic scenes self-sufficiently, without relying on ground truth object annotations or pre-trained models for dynamic object segmentation or optical flow estimation. Our method achieves state-of-the-art performance in sensor simulation, significantly outperforming previous methods when reconstructing static (+2.93 PSNR) and dynamic (+3.70 PSNR) scenes. In addition, to bolster EmerNeRF's semantic generalization, we lift 2D visual foundation model features into 4D space-time and address a general positional bias in modern Transformers, significantly boosting 3D perception performance (e.g., 37.50% relative improvement in occupancy prediction accuracy on average). Finally, we construct a diverse and challenging 120-sequence dataset to benchmark neural fields under extreme and highly-dynamic settings.
+
+    <div align=center><img src="./assets/data/EmerNeRF.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2311.02077-b31b1b.svg)](https://arxiv.org/abs/2311.02077) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://emernerf.github.io/) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/NVlabs/EmerNeRF)
 
 - **UniSim: Synthesizing Data with Perception Annotations Using Diffusion Models**.
     <details span>
