@@ -44,6 +44,7 @@ If this work is helpful for your research, please consider citing the following 
 ```
 
 ##  📰 News
+- `[2024/02/18]` Add more related papers, including a new related survey paper.
 - `[2024/01/18]` Add two new data preparation related papers.
 - `[2024/01/17]` Release this repository and open-access our survey paper in arXiv.
 - `[2023/12/19]` Initial commit.
@@ -67,6 +68,15 @@ If this work is helpful for your research, please consider citing the following 
   - [Multimodal Foundation Models](#multimodal-foundation-models)
 
 ## Related Survey Papers
+- **A Survey for Foundation Models in Autonomous Driving**.
+    <details span>
+    <summary>Abstract</summary>
+    The advent of foundation models has revolutionized the fields of natural language processing and computer vision, paving the way for their application in autonomous driving (AD). This survey presents a comprehensive review of more than 40 research papers, demonstrating the role of foundation models in enhancing AD. Large language models contribute to planning and simulation in AD, particularly through their proficiency in reasoning, code generation and translation. In parallel, vision foundation models are increasingly adapted for critical tasks such as 3D object detection and tracking, as well as creating realistic driving scenarios for simulation and testing. Multi-modal foundation models, integrating diverse inputs, exhibit exceptional visual understanding and spatial reasoning, crucial for end-to-end AD. This survey not only provides a structured taxonomy, categorizing foundation models based on their modalities and functionalities within the AD domain but also delves into the methods employed in current research. It identifies the gaps between existing foundation models and cutting-edge AD approaches, thereby charting future research directions and proposing a roadmap for bridging these gaps.
+    <div align=center><img src="./assets/AD_FM_Survey.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2402.01105-b31b1b.svg)](https://arxiv.org/abs/2402.01105)
+
 - **Foundation Models in Robotics: Applications, Challenges, and the Future**.
     <details span>
     <summary>Abstract</summary>
@@ -203,6 +213,16 @@ If this work is helpful for your research, please consider citing the following 
 
 
 ### Diffusion
+- **WoVoGen: World Volume-aware Diffusion for Controllable Multi-camera Driving Scene Generation**.
+    <details span>
+    <summary>Abstract</summary>
+    Generating multi-camera street-view videos is critical for augmenting autonomous driving datasets, addressing the urgent demand for extensive and varied data. Due to the limitations in diversity and challenges in handling lighting conditions, traditional rendering-based methods are increasingly being supplanted by diffusion-based methods. However, a significant challenge in diffusion-based methods is ensuring that the generated sensor data preserve both intra-world consistency and inter-sensor coherence. To address these challenges, we combine an additional explicit world volume and propose the World Volume-aware Multi-camera Driving Scene Generator (WoVoGen). This system is specifically designed to leverage 4D world volume as a foundational element for video generation. Our model operates in two distinct phases: (i) envisioning the future 4D temporal world volume based on vehicle control sequences, and (ii) generating multi-camera videos, informed by this envisioned 4D temporal world volume and sensor interconnectivity. The incorporation of the 4D world volume empowers WoVoGen not only to generate high-quality street-view videos in response to vehicle control inputs but also to facilitate scene editing tasks.
+
+    <div align=center><img src="./assets/data/WoVoGen.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2312.02934-b31b1b.svg)](https://arxiv.org/abs/2312.02934) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/fudan-zvg/WoVoGen)
+
 - **Panacea: Panoramic and Controllable Video Generation for Autonomous Driving**.
     <details span>
     <summary>Abstract</summary>
@@ -259,6 +279,26 @@ If this work is helpful for your research, please consider citing the following 
 
 
 ### NeRF
+- **Neural Rendering based Urban Scene Reconstruction for Autonomous Driving**.
+    <details span>
+    <summary>Abstract</summary>
+    Dense 3D reconstruction has many applications in automated driving including automated annotation validation, multimodal data augmentation, providing ground truth annotations for systems lacking LiDAR, as well as enhancing auto-labeling accuracy. LiDAR provides highly accurate but sparse depth, whereas camera images enable estimation of dense depth but noisy particularly at long ranges. In this paper, we harness the strengths of both sensors and propose a multimodal 3D scene reconstruction using a framework combining neural implicit surfaces and radiance fields. In particular, our method estimates dense and accurate 3D structures and creates an implicit map representation based on signed distance fields, which can be further rendered into RGB images, and depth maps. A mesh can be extracted from the learned signed distance field and culled based on occlusion. Dynamic objects are efficiently filtered on the fly during sampling using 3D object detection models. We demonstrate qualitative and quantitative results on challenging automotive scenes.
+
+    <div align=center><img src="./assets/data/Neural_Sim.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2402.06826-b31b1b.svg)](https://arxiv.org/abs/2402.06826)
+
+- **OASim: an Open and Adaptive Simulator based on
+Neural Rendering for Autonomous Driving**.
+    <details span>
+    <summary>Abstract</summary>
+    With deep learning and computer vision technology development, autonomous driving provides new solutions to improve traffic safety and efficiency. The importance of building high-quality datasets is self-evident, especially with the rise of end-to-end autonomous driving algorithms in recent years. Data plays a core role in the algorithm closed-loop system. However, collecting real-world data is expensive, time-consuming, and unsafe. With the development of implicit rendering technology and in-depth research on using generative models to produce data at scale, we propose OASim, an open and adaptive simulator and autonomous driving data generator based on implicit neural rendering. It has the following characteristics: (1) High-quality scene reconstruction through neural implicit surface reconstruction technology. (2) Trajectory editing of the ego vehicle and participating vehicles. (3) Rich vehicle model library that can be freely selected and inserted into the scene. (4) Rich sensors model library where you can select specified sensors to generate data. (5) A highly customizable data generation system can generate data according to user needs. We demonstrate the high quality and fidelity of the generated data through perception performance evaluation on the Carla simulator and real-world data acquisition.
+
+    <div align=center><img src="./assets/data/OASim.jpg" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2402.03830-b31b1b.svg)](https://arxiv.org/abs/2402.03830) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/PJLab-ADG/OASim)
 
 - **EmerNeRF: Emergent Spatial-Temporal Scene Decomposition via Self-Supervision**.
     <details span>
