@@ -44,6 +44,7 @@ If this work is helpful for your research, please consider citing the following 
 ```
 
 ##  📰 News
+- `[2024/07/01]` Add two 3DGS papers.
 - `[2024/02/18]` Add more related papers, including a new related survey paper.
 - `[2024/01/18]` Add two new data preparation related papers.
 - `[2024/01/17]` Release this repository and open-access our survey paper in arXiv.
@@ -404,6 +405,29 @@ Neural Rendering for Autonomous Driving**.
 👆 [Back to Top](#Table-of-Content)
 
 ### 3D Gaussian Splatting
+- **TCLC-GS: Tightly Coupled LiDAR-Camera Gaussian Splatting for Surrounding Autonomous Driving Scenes**.
+    <details span>
+    <summary>Abstract</summary>
+    Most 3D Gaussian Splatting (3D-GS) based methods for urban scenes initialize 3D Gaussians directly with 3D LiDAR points, which not only underutilizes LiDAR data capabilities but also overlooks the potential advantages of fusing LiDAR with camera data. In this paper, we design a novel tightly coupled LiDAR-Camera Gaussian Splatting (TCLC-GS) to fully leverage the combined strengths of both LiDAR and camera sensors, enabling rapid, high-quality 3D reconstruction and novel view RGB/depth synthesis. TCLC-GS designs a hybrid explicit (colorized 3D mesh) and implicit (hierarchical octree feature) 3D representation derived from LiDAR-camera data, to enrich the properties of 3D Gaussians for splatting. 3D Gaussian's properties are not only initialized in alignment with the 3D mesh which provides more completed 3D shape and color information, but are also endowed with broader contextual information through retrieved octree implicit features. During the Gaussian Splatting optimization process, the 3D mesh offers dense depth information as supervision, which enhances the training process by learning of a robust geometry. Comprehensive evaluations conducted on the Waymo Open Dataset and nuScenes Dataset validate our method's state-of-the-art (SOTA) performance. Utilizing a single NVIDIA RTX 3090 Ti, our method demonstrates fast training and achieves real-time RGB and depth rendering at 90 FPS in resolution of 1920x1280 (Waymo), and 120 FPS in resolution of 1600x900 (nuScenes) in urban scenarios.
+
+    <div align=center><img src="./assets/data/TCLC-GS.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2404.02410-b31b1b.svg)](https://arxiv.org/abs/2404.02410)
+- **DC-Gaussian: Improving 3D Gaussian Splatting for Reflective Dash Cam Videos**.
+    <details span>
+    <summary>Abstract</summary>
+    We present DC-Gaussian, a new method for generating novel views from in-vehicle dash cam videos.
+
+    While neural rendering techniques have made significant strides in driving scenarios, existing methods are primarily designed for videos collected by autonomous vehicles. However, these videos are limited in both quantity and diversity compared to dash cam videos, which are more widely used across various types of vehicles and capture a broader range of scenarios. Dash cam videos often suffer from severe obstructions such as reflections and occlusions on the windshields, which significantly impede the application of neural rendering techniques. To address this challenge, we develop DC-Gaussian based on the recent real-time neural rendering technique 3D Gaussian Splatting (3DGS). Our approach includes an adaptive image decomposition module to model reflections and occlusions in a unified manner. Additionally, we introduce illumination- aware obstruction modeling to manage reflections and occlusions under varying lighting conditions. Lastly, we employ a geometry-guided Gaussian enhancement strategy to improve rendering details by incorporating additional geometry priors.
+
+    Experiments on self-captured and public dash cam videos show that our method not only achieves state-of-the-art performance in novel view synthesis, but also accurately reconstructing captured scenes getting rid of obstructions.
+
+    <div align=center><img src="./assets/data/DC-Gaussian.png" width="100%" /></div>
+    </details>
+
+    [![arXiv](https://img.shields.io/badge/arXiv-2405.17705-b31b1b.svg)](https://arxiv.org/abs/2405.17705) [![WEB Page](https://img.shields.io/badge/Project-Page-159957.svg)](https://linhanwang.github.io/dcgaussian/) [![WEB Page](https://img.shields.io/badge/Github-Page-159957.svg)](https://github.com/linhanwang/DC-Gaussian)
+
 - **Street Gaussians for Modeling Dynamic Urban Scenes**.
     <details span>
     <summary>Abstract</summary>
